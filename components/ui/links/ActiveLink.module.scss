@@ -1,0 +1,20 @@
+@import "@styles/vars";
+
+.active {
+	font-weight: 700 !important;
+	background-image: linear-gradient($primary, $primary);
+	background-size: 100% 1px;
+	&:hover {
+		background-size: 100% 2px;
+	}
+}
+
+// МОБИЛА
+@media (max-width: 767px) {
+	.active {
+		color: $white;
+		&:hover {
+			background-size: 100% 1px;
+		}
+	}
+}

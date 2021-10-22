@@ -1,0 +1,60 @@
+//H
+$font-family-monospace: 'Raleway';
+//$font-family-monospace: 'Raleway',sans-serif,Arial,Helvetica;
+//Body
+$font-family-sans-serif: 'Raleway';
+//$font-family-sans-serif: 'Raleway',sans-serif,Arial,Helvetica;
+//$font-family-base:
+
+$white:  #FFFFFF;
+$black: #181c32;
+$main: #424242;
+$primary: #4985FF;
+$primarydark: #282A3D;
+
+$lightgrey: #f5f8fa;
+$grey: rgba(24, 28, 50, 0.125);
+$secondary: #5b5b5b;
+$danger: #df2e1e;
+
+$btn-focus-box-shadow:  0;
+
+$theme-colors: (
+	"secondary":  	$secondary,
+	"primary":    	$primary,
+    "danger": 		$danger,
+);
+
+//FIX BOOTSTRAP 5.0.2
+$zindex-modal-backdrop:	1040;
+
+// ======================================================
+// HEADER
+// ======================================================
+$height-header: 56px;
+
+// ======================================================
+// Card & P - bootstrap var
+// ======================================================
+$paragraph-margin-bottom: .2rem;
+
+// ======================================================
+// border-radius - bootstrap var
+// ======================================================
+$card-border-radius: 0;
+$card-inner-border-radius: 0;
+
+// ======================================================
+// NAV TABS - bootstrap var
+// ======================================================
+$nav-link-padding-y:		.3rem;
+$nav-link-color: 			$secondary;
+$nav-link-hover-color: 		$danger;
+
+$nav-tabs-border-radius: 	0;
+$nav-tabs-border-color: 	transparent;
+
+$nav-tabs-link-active-color:        $white;
+$nav-tabs-link-active-bg:           $danger;
+$nav-tabs-link-active-border-color: transparent;
+$nav-tabs-link-hover-border-color:  transparent;

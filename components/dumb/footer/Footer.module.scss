@@ -1,0 +1,59 @@
+@import "@styles/vars";
+
+.bg {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: $primary;
+	color: $white;
+	a {
+		color: $white;
+		&:hover {
+			color: $white;
+		}
+	}
+	svg {
+		max-width: 206px;
+		margin-bottom: 34px;
+		[data-fill="primary"] {
+			fill: $white !important;
+		}
+		&:hover {
+			[data-fill="primarydark"] {
+				transform: translateY(2px);
+			}
+		}
+	}
+	li {
+		list-style: none;
+		margin-bottom: 1rem;
+		text-align: left;
+	}
+	
+}
+
+.bigLink {
+	display: block;
+	font-size: 1.5rem;
+	padding: 0 0 15px 0;
+	&:hover {
+		background-size: 0;
+	}
+}
+
+.bottom {
+	border-top: 1px solid $white;
+	font-weight: 400;
+}
+
+.light {
+	font-weight: 300 !important;
+}
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+}
+
+@media  (max-width: 767px) {
+
+}

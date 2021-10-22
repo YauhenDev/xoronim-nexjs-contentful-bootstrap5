@@ -1,0 +1,29 @@
+{
+	"mainData" : {
+		"nameSite": "dev XORONIM",
+		"nameCompanyFull": "",
+		"nameCompanyShort": "",
+		"legalFullDescription": "",
+		"legalFullMode": "",
+		"legalFullBank": "",
+		"legalShortAdr": "",
+		"phoneNumber_1": "",
+		"targetKonv_1": "",
+		"phoneNumber_2": "",
+		"targetKonv_2": "",
+		"email": "info@xoronim.moscow",
+		"targetKonv_email": ""
+	},
+	"mainPages": [
+		{	"id": 0,
+			"nameLink": "Главная",
+			"titleLink": "На главную",
+			"seoTitle": "seoTitle",
+			"seoDescription" : "seoDescription",
+			"pathLink": "/"
+		}
+	]
+}
+
+
+

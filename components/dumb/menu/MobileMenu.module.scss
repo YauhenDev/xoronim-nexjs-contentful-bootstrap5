@@ -1,0 +1,81 @@
+@import "@styles/vars";
+
+.aside {
+	background-color: $primary !important;
+}
+
+.mobileToggler {
+	line-height: $height-header !important;
+	svg {
+		stroke: $primary;
+		width: 40px;
+		margin-right: 14px;
+	}
+}
+
+.logo {
+	svg {
+		max-width: 160px;
+		margin: 10px 0 0 15px;
+		[data-fill="primary"] {
+			fill: $white !important;
+		}
+	}
+}
+
+.nav {
+	ul {
+		display: inline-flex;
+		margin-bottom: 0;
+	}
+	li {
+		list-style: none;
+		margin-right: 10px;
+		text-align: left;
+	}
+	a {
+		line-height: $height-header;
+		color: $main;
+		font-weight: 500;
+		padding: 0 5px;
+		background-image: linear-gradient($primary, $primary);
+	}
+}
+
+.close {
+	font-size: 1.8rem;
+	margin: 5px 5px 0 auto;
+    float: right;
+	opacity: .8;
+	&:hover {
+		opacity: 1;
+	}
+	svg {
+		width: 40px;
+		stroke: $white;
+	}
+}
+
+@media  (max-width: 767px) {
+	.nav {
+		ul {
+			flex-direction: column;
+			padding: 1rem 1rem;
+			margin-bottom: .5rem;
+
+		}
+		li {
+			margin: unset;
+		}
+		a {
+			line-height: ($height-header - 10px);
+			font-size: 1.2rem;
+			color: $white;
+			display: block;
+			background-image: linear-gradient($white, $white);
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}
