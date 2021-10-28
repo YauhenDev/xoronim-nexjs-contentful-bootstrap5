@@ -1,20 +1,37 @@
 @import "@styles/vars";
 
 .active {
-	font-weight: 700 !important;
-	background-image: linear-gradient($primary, $primary);
-	background-size: 100% 1px;
+	color: $main;
+	position: relative;
+    display: inline-block;
+	z-index: 1;
+	&::before {
+		content: "";
+		height: 100%;
+		width: 100%;
+		background-image: linear-gradient(to top, $gold 25%, transparent 40%);
+		position: absolute;
+		left: 0;
+		z-index: -1;    
+		transform: rotate(0deg);
+		transform-origin: left bottom;
+		transition: width .1s ease-out;
+		
+	}
 	&:hover {
-		background-size: 100% 2px;
+		background-size: 0 0;
 	}
 }
 
 // МОБИЛА
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	.active {
-		color: $white;
+		color: $black;
+		&::before {
+			background-image: linear-gradient(to top, $gold 0%, $gold 100%);
+		}
 		&:hover {
-			background-size: 100% 1px;
+			background-size: 0 0;
 		}
 	}
 }

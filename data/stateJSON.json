@@ -7,7 +7,7 @@
 		"legalFullMode": "",
 		"legalFullBank": "",
 		"legalShortAdr": "",
-		"phoneNumber_1": "",
+		"phoneNumber_1": "71231234567",
 		"targetKonv_1": "",
 		"phoneNumber_2": "",
 		"targetKonv_2": "",
@@ -21,9 +21,34 @@
 			"seoTitle": "seoTitle",
 			"seoDescription" : "seoDescription",
 			"pathLink": "/"
+		},
+		{	"id": 1,
+			"nameLink": "Порядок действий",
+			"titleLink": "Порядок действий",
+			"seoTitle": "seoTitle",
+			"seoDescription" : "seoDescription",
+			"pathLink": "/procedure"
+		},
+		{	"id": 2,
+			"nameLink": "Услуги",
+			"titleLink": "Услуги",
+			"seoTitle": "seoTitle",
+			"seoDescription" : "seoDescription",
+			"pathLink": "/services"
+		},
+		{	"id": 3,
+			"nameLink": "Ритуальные принадлежности",
+			"titleLink": "Ритуальные принадлежности",
+			"seoTitle": "seoTitle",
+			"seoDescription" : "seoDescription",
+			"pathLink": "/accessories"
+		},
+		{	"id": 4,
+			"nameLink": "Выставочный зал",
+			"titleLink": "Выставочный зал",
+			"seoTitle": "seoTitle",
+			"seoDescription" : "seoDescription",
+			"pathLink": "/showroom"
 		}
 	]
 }
-
-
-

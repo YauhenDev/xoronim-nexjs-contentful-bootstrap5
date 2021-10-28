@@ -1,0 +1,21 @@
+@import "@styles/vars";
+
+.wrapper {
+	background-color: $bg-light-purple;
+	padding: 20px 0;
+	position: sticky;
+	top: 0;
+	&[data-menufix="true"] {
+		padding: 10px 0;
+	}	
+}
+
+
+@media (max-width: 991px) {
+	.wrapper {
+		&[data-menufix="false"],
+		&[data-menufix="true"] {
+			padding: 5px 0;
+		}
+	}
+}

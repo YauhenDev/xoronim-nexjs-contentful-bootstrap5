@@ -4,7 +4,7 @@
 
 body {
 	color: $secondary;
-	font-weight: 600;
+	font-weight: 400;
 	&::-webkit-scrollbar {
 		width: 6px;
 	}
@@ -35,25 +35,6 @@ a {
 			background-size: 0;
 		}
 	}
-}
-
-svg {
-	[data-fill="main"] {
-		fill: $main !important;
-	}
-	[data-fill="mainStroke"] {
-		stroke: $main !important;
-	}
-	[data-fill="primary"] {
-		fill: $primary !important;
-	}
-	[data-fill="primarydark"] {
-		fill: $primarydark !important;
-	}
-}
-
-.btn-light {
-	background-color: transparent !important;
 }
 
 // обнуляем Global style bootstrap

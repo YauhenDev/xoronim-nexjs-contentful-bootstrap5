@@ -1,20 +1,20 @@
 //H
-$font-family-monospace: 'Raleway';
-//$font-family-monospace: 'Raleway',sans-serif,Arial,Helvetica;
+$font-family-monospace: 'IBM Plex Sans',sans-serif,Arial,Helvetica;
 //Body
-$font-family-sans-serif: 'Raleway';
-//$font-family-sans-serif: 'Raleway',sans-serif,Arial,Helvetica;
-//$font-family-base:
+$font-family-sans-serif: 'IBM Plex Sans',sans-serif,Arial,Helvetica;
 
 $white:  #FFFFFF;
 $black: #181c32;
-$main: #424242;
-$primary: #4985FF;
+$primary: #B9CDDA;
 $primarydark: #282A3D;
+
+$bg-light-purple: #D7DAE5;
+$main: #334242;
+$secondary: #1C2626;
+$gold: #DFD7B6;
 
 $lightgrey: #f5f8fa;
 $grey: rgba(24, 28, 50, 0.125);
-$secondary: #5b5b5b;
 $danger: #df2e1e;
 
 $btn-focus-box-shadow:  0;
@@ -31,7 +31,8 @@ $zindex-modal-backdrop:	1040;
 // ======================================================
 // HEADER
 // ======================================================
-$height-header: 56px;
+$height-header: 68px;
+$height-header-fix: 42px;
 
 // ======================================================
 // Card & P - bootstrap var

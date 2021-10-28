@@ -1,0 +1,75 @@
+@import "@styles/vars";
+
+.link {
+	display: block;
+    float: right;
+	margin-top: 8px;
+	&:hover{
+		background-size: 0 0;
+	}
+	svg {
+		width: 18px;
+	}
+}
+
+.pulse, 
+.phone {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	color: #fff;
+	text-align: center;
+	border-radius: 50%;
+}
+.phone {
+	animation: phone 1.5s ease-in-out infinite;
+}
+
+.pulse {
+	background: $main;
+	position: relative;
+	transition: .5s;
+	&:hover {
+		background: $black;
+		
+	}
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		border: 1px solid $main;
+		left: -20px;
+		right: -20px;
+		top: -20px;
+		bottom: -20px;
+		border-radius: 50%;
+		animation: pulse 1.8s linear infinite;
+		opacity: 0;
+   }
+   &::after {
+	animation-delay: .5s;
+   }
+}
+   
+@keyframes phone {
+	0%, 100% {
+		transform: rotate(-10deg);
+	}
+	50% {
+		transform: rotate(11deg);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}

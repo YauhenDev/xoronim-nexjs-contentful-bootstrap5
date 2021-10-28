@@ -11,7 +11,7 @@ import {
 const ActiveLink = ({ fuzzy = false, href, children }) => {
 	const router = useRouter()
 	let className = children.props.className || ''
-	let dataactive = children.props.setAttribute || 'false'
+	//let dataactive = children.props.setAttribute || 'false'
 
 	const hrefTokens = href.substr(1).split('/')
 	const pathTokens = router.asPath.substr(1).split('/')
@@ -26,12 +26,13 @@ const ActiveLink = ({ fuzzy = false, href, children }) => {
 
 	if ((!fuzzy && router.asPath === href) || (fuzzy && matched)) {
 		className = `${ className } ${ active }`;
-		dataactive = 'true'
+		//dataactive = 'true'
 	}
 
 	return (
 		<NextLink href={href}>
-			{React.cloneElement(children, { className, dataactive })}
+			{/* {React.cloneElement(children, { className, dataactive })} */}
+			{React.cloneElement(children, { className })}
 		</NextLink>
 	)
 }

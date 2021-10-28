@@ -1,69 +1,52 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {Container, Row, Col, Nav, NavDropdown } from 'react-bootstrap'
 
 import LinkLogo from '@components/ui/logo/LinkLogo'
-import MobileMenu from '@components/dumb/menu/MobileMenu'
-import LinksHeaderMenu from '@components/dumb/menu/LinksHeaderMenu'
+import Phone from '@components/dumb/phone/Phone'
 
 import {
 	wrapper,
-	//row,
-	logo,
-	ico
+	logo
 } from './Header.module.scss'
 
 export default function Header({ 
-	mainPages,
-	widthDevice
+	mainData
 }) {
-
-	// Определение телефона по сетке bootstrap 5
-	const [isMobile, setIsMobile] = useState(widthDevice);
-	const ismobile = widthDevice < 768;
-	if (ismobile !== isMobile) setIsMobile(ismobile);
 
 	//debugger;
 	return (
 	<Container fluid="xxl" className={ wrapper }>
 		<header className="row">
+			<Col lg={ 2 } xl={ 2 } className={`d-none d-lg-block ${ logo }`}>
 
-			<Col  xs={ 5 } sm={ 3 } md={ 2 } lg={ 2 } className={ logo }>
-
-				ЛОГО
+				<LinkLogo />
 
 			</Col>
-			<Col xs={ 7 } sm={ 9 }  md={ 10 } lg={ 10 } className="text-end">
-				<Row>
+			<Col xs={ 6 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 3 } >
+			
+				Официальный сайт<br />
+				Городской ритуальной службы сервиса<br />
+				Москва и Московская область
 
-					{isMobile ?
-						<>
-							<Col className={ ico } >
+			</Col>
+			<Col xs={ 6 } sm={ 6 } md={ 4 } lg={ 2 } xl={ 2 } >
+			
+				Более 15 лет <br />
+				профессионального<br />
+				обслуживания
 
+			</Col>
+			<Col md={ 4 } lg={ 2 } xl={ 2 } className="d-none d-md-block" >
+			
+				Вызвать агента
 
-							</Col>
-							<Col>
+			</Col>
+			<Col lg={ 3 } xl={ 3 }  className="d-none d-lg-block">
 
-								<MobileMenu 
-									mainPages={ mainPages }
-								/>
-
-							</Col>
-						</>
-					: 
-						<>
-							<Col>
-								<LinksHeaderMenu 
-									mainPages={ mainPages } 
-								/>
-							</Col>
-							<Col className={ ico } >
-
-
-							</Col>
-						</>
-					}
-
-				</Row>
+				Круглосуточная горячая линия:<br />
+				<Phone 
+					mainData={ mainData }
+				/>
 
 			</Col>
 		</header>

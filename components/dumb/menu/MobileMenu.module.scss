@@ -1,46 +1,25 @@
 @import "@styles/vars";
 
+
+.sidebarLink {
+	font-size: 16px;
+	font-weight: 400;
+	color: $secondary;
+}
+
 .aside {
 	background-color: $primary !important;
 }
 
 .mobileToggler {
-	line-height: $height-header !important;
+	line-height: $height-header-fix !important;
 	svg {
-		stroke: $primary;
+		stroke: $main;
 		width: 40px;
 		margin-right: 14px;
 	}
 }
 
-.logo {
-	svg {
-		max-width: 160px;
-		margin: 10px 0 0 15px;
-		[data-fill="primary"] {
-			fill: $white !important;
-		}
-	}
-}
-
-.nav {
-	ul {
-		display: inline-flex;
-		margin-bottom: 0;
-	}
-	li {
-		list-style: none;
-		margin-right: 10px;
-		text-align: left;
-	}
-	a {
-		line-height: $height-header;
-		color: $main;
-		font-weight: 500;
-		padding: 0 5px;
-		background-image: linear-gradient($primary, $primary);
-	}
-}
 
 .close {
 	font-size: 1.8rem;
@@ -52,30 +31,32 @@
 	}
 	svg {
 		width: 40px;
-		stroke: $white;
+		stroke: $main;
 	}
 }
 
-@media  (max-width: 767px) {
+@media  (max-width: 991px) {
 	.nav {
 		ul {
 			flex-direction: column;
 			padding: 1rem 1rem;
 			margin-bottom: .5rem;
-
 		}
 		li {
-			margin: unset;
+			list-style: none;
+			text-align: left;
 		}
-		a {
-			line-height: ($height-header - 10px);
-			font-size: 1.2rem;
-			color: $white;
-			display: block;
-			background-image: linear-gradient($white, $white);
-			&:hover {
-				color: $white;
-			}
+	}
+	.sidebarLink {
+		padding-left: 20px;
+		line-height: ($height-header - 10px);
+		font-size: 1.2rem;
+		color: $main;
+		display: block;
+		background-image: linear-gradient(to top, $gold 20%, transparent 80%);
+		&:hover {
+			color: $black;
+			background-size: 100% 100%;
 		}
 	}
 }
