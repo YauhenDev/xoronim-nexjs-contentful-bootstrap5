@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Row, Col, Nav, Button, Offcanvas } from 'react-bootstrap'
+import { Row, Col, Button, Offcanvas } from 'react-bootstrap'
 
 import LinkLogo from '@components/ui/logo/LinkLogo'
 import CloseSVG from '@components/ui/ico/CloseSVG'

@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import {Container, Row, Col, Nav, NavDropdown } from 'react-bootstrap'
+import {Container, Col } from 'react-bootstrap'
 
 import LinkLogo from '@components/ui/logo/LinkLogo'
 import Phone from '@components/dumb/phone/Phone'

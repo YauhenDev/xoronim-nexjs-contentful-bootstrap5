@@ -5,7 +5,6 @@ import NextNprogress from 'nextjs-progressbar'
 
 import Header from '@components/dumb/header/Header'
 import Navbar from '@components/dumb/navbar/Navbar'
-import Footer from '@components/dumb/footer/Footer'
 
 export default function Layout({ children, state }) {
 
@@ -60,11 +59,6 @@ export default function Layout({ children, state }) {
 		/>
 		
 		{ children }
-
-		{/* <Footer
-			mainPages={ state.mainPages }
-			mainData={ state.mainData }
-		/> */}
 
 	</>
 	)
