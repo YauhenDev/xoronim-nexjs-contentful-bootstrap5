@@ -37,10 +37,45 @@ a {
 	}
 }
 
+.btn-outline-primary {
+	color: $secondary;
+	font-size: 14px;
+	padding: 0.5rem 1.4rem;
+	border-width: 2px;
+	border-radius: 2rem;
+}
+
 // обнуляем Global style bootstrap
 .nav-link,
 .dropdown-item {
 	padding: 0;
 	background-image: none;
 	background-size: 0;
+}
+
+//Задаем цвета для логотипа
+svg {
+	[data-fill="primary"] {
+		fill: $primary;
+	}
+	[data-fill="bglightpurple"] {
+		fill: $bg-light-purple;
+	}
+}
+@media  (max-width: 1199px) {
+	.btn-outline-primary {
+		padding: .5rem .8rem;
+
+	}
+}
+
+@media  (max-width: 991px) {
+	svg {
+		[data-fill="primary"] {
+			fill: $main;
+		}
+		[data-fill="bglightpurple"] {
+			fill: $primarydark;
+		}
+	}
 }

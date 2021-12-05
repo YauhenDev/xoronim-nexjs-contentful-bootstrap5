@@ -4,10 +4,13 @@ import {Container, Row, Col, Nav } from 'react-bootstrap'
 import LinkLogo from '@components/ui/logo/LinkLogo'
 import LinksMenu  from '@components/dumb/menu/LinksMenu'
 import MobileMenu from '@components/dumb/menu/MobileMenu'
+import PhoneSVG from '@components/ui/ico/PhoneSVG'
 import Phone from '@components/dumb/phone/Phone'
 
 import {
-	wrapper
+	wrapper,
+	logomobile,
+	phone
 } from './Navbar.module.scss'
 
 
@@ -48,12 +51,18 @@ export default function Header({
 			: 
 				// отображать ПОЛНЫЙ NAVBAR
 				<Row>
-					<Col lg={ 2 }>
+					
 						{
 							// Отображать логотип при СКРОЛЕ
-							scroll ? <LinkLogo /> : "" 
+							scroll 
+							? 
+							<Col lg={ 2 } className={ logomobile }>
+								<LinkLogo /> 
+							</Col>
+							: 
+								"" 
 						}
-					</Col>
+					
 					<Col className="text-center">
 						<Nav className="navbar-expand-lg justify-content-center">
 							<LinksMenu 
@@ -61,13 +70,18 @@ export default function Header({
 							/>
 						</Nav>
 					</Col>
-					<Col lg={ 2 } className="text-end" >
+					
 						{
 							// Отображать телефон при СКРОЛЕ
-							scroll ? <Phone mainData={ mainData } /> : ""
+							scroll 
+							? 
+								<Col lg={ 2 } className={`text-end ${ phone }`} >
+									<PhoneSVG />
+									<Phone mainData={ mainData } />
+								</Col>
+							: 
+								""
 						}
-					</Col>
-
 				</Row>
 			}
 		</Container>			

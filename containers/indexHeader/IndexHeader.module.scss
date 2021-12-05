@@ -1,0 +1,59 @@
+@import "@styles/vars";
+
+$height-index-header: 444px;
+
+.content {
+	position: relative;
+	z-index: 1;
+	padding: 4rem 1.5rem;
+}
+
+.parallax {
+	height: $height-index-header;
+	position: relative;
+	overflow: hidden;
+	background-image: url("/assets/img/index_bg/bg_index_header.jpg");
+	background-position: 50% bottom;
+}
+
+.angel {
+	text-align: right;
+	position: absolute;
+	width: 100%;
+	height: $height-index-header;
+	z-index: 0;
+}
+
+//.parallaxBg0,
+.parallaxBg1,
+.parallaxBg2 {
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: $height-index-header;
+	background-position: 50% bottom;
+	z-index: 0;
+}
+.parallaxBg0 {
+ 	background-image: url("/assets/img/index_bg/bg_index_header.jpg");  
+}
+
+@media (max-width: 1399px) {
+	.parallax {
+		height: calc($height-index-header - 100px);
+		background-position: left bottom;
+	}
+	.parallaxBg1,
+	.parallaxBg2 {
+		height: calc($height-index-header - 100px);
+	}
+}
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+
+}

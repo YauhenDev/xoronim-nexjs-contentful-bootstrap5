@@ -5,9 +5,35 @@
 	padding: 20px 0;
 	position: sticky;
 	top: 0;
+	z-index: 2;
 	&[data-menufix="true"] {
 		padding: 10px 0;
-	}	
+	}
+	
+}
+
+.logomobile {
+	svg {
+		height: 45px;
+		[data-fill="primary"] {
+			fill: $main;
+		}
+		[data-fill="bglightpurple"] {
+			fill: $primarydark;
+		}
+	}
+}
+
+.phone{
+	padding-top: .5rem;
+	svg {
+		width: 20px;
+		fill: $secondary;
+		margin: -5px 5px 0 0;
+	}
+	a {
+		color: $secondary;
+	}
 }
 
 

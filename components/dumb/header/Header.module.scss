@@ -2,6 +2,9 @@
 
 .wrapper {
 	padding-top: 1rem;
+	font-size: 14px;
+	color: $secondary;
+	line-height: 1.1em;
 }
 
 .logo {
@@ -9,7 +12,7 @@
 		line-height: $height-header;
 	}
 	svg {
-		max-width: 103px;
+		//max-width: 103px;
 		//margin: 10px 0 0 0;
 	}
 }
@@ -19,6 +22,27 @@
 	svg {
 		width: 18px;
 	}
+}
+
+.phone {
+	small {
+		display: block;
+		padding: .2rem 0 .4rem;
+		color: $primary;
+	}
+	svg {
+		width: 20px;
+		fill: $primary;
+		margin: -5px 5px 0 0;
+	}
+	a {
+		font-size: 1.1rem;
+		color: $primarydark;
+	}
+}
+
+.company {
+	color: $primary;
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {

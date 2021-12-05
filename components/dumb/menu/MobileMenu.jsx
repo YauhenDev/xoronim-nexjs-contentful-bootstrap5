@@ -10,6 +10,7 @@ import {
 	mobileToggler,
 	aside,
 	logo,
+	logomobile,
 	close
 } from './MobileMenu.module.scss'
 
@@ -35,7 +36,7 @@ export default function MobileMenu({
 	<>
 	
 		<Row>
-			<Col>
+			<Col xs={ 4 } sm={ 4 } md={ 4 } className={ logomobile }>
 				<LinkLogo />
 			</Col>
 			<Col xs={ 5 } sm={ 6 } md={ 6 }  className="text-end">

@@ -1,11 +1,14 @@
-import {Container, Col } from 'react-bootstrap'
+import {Container, Col, Button } from 'react-bootstrap'
 
 import LinkLogo from '@components/ui/logo/LinkLogo'
+import PhoneSVG from '@components/ui/ico/PhoneSVG'
 import Phone from '@components/dumb/phone/Phone'
 
 import {
 	wrapper,
-	logo
+	logo,
+	company,
+	phone
 } from './Header.module.scss'
 
 export default function Header({ 
@@ -21,28 +24,30 @@ export default function Header({
 				<LinkLogo />
 
 			</Col>
-			<Col xs={ 6 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 3 } >
+			<Col xs={ 6 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 3 } className={`pt-1 ${ company}`} >
 			
 				Официальный сайт<br />
-				Городской ритуальной службы сервиса<br />
+				Городская ритуальной служба<br />
 				Москва и Московская область
 
 			</Col>
-			<Col xs={ 6 } sm={ 6 } md={ 4 } lg={ 2 } xl={ 2 } >
+			<Col xs={ 6 } sm={ 6 } md={ 4 } lg={ 2 } xl={ 2 } className={`pt-1`}>
 			
-				Более 15 лет <br />
+				Более <strong>15 лет</strong><br />
 				профессионального<br />
 				обслуживания
 
 			</Col>
-			<Col md={ 4 } lg={ 2 } xl={ 2 } className="d-none d-md-block" >
+			<Col md={ 4 } lg={ 2 } xl={ 2 } className="d-none d-md-block pt-1" >
 			
-				Вызвать агента
+				
+				<Button variant="outline-primary">Вызвать агента</Button>
 
 			</Col>
-			<Col lg={ 3 } xl={ 3 }  className="d-none d-lg-block">
+			<Col lg={ 3 } xl={ 3 }  className={`d-none d-lg-block text-center ${ phone }`}>
 
-				Круглосуточная горячая линия:<br />
+				<small>Круглосуточная горячая линия:</small>
+				<PhoneSVG />
 				<Phone 
 					mainData={ mainData }
 				/>
