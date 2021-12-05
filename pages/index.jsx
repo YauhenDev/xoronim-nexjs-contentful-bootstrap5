@@ -3,9 +3,13 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import IndexHeader from '@containers/indexHeader/IndexHeader'
 
+import BlockPrice from '@containers/blockPrice/BlockPrice'
+import BlockDetails from '@containers/blockDetails/BlockDetails'
+import BlockServices from '@containers/blockServices/BlockServices'
 import BlockQuestions from '@containers/blockQuestions/BlockQuestions'
 import BlockShowroom from '@containers/blockShowroom/BlockShowroom'
 import IndexAbout from '@containers/indexAbout/IndexAbout'
+import IndexTrouble from '@containers/indexTrouble/IndexTrouble'
 
 
 export default function Home({ state, widthDevice } ) {
@@ -26,21 +30,39 @@ export default function Home({ state, widthDevice } ) {
 		
 		/>
 
+		<IndexTrouble 
+		
+		/>
+
+		<BlockPrice 
+		
+		/>
+
+		<BlockDetails 
+		
+		/>
+
+		<BlockServices 
+		
+		/>
+
+		<BlockQuestions 
+		
+		/>
+
+		<BlockShowroom 
+		
+		/>
+
+		<IndexAbout 
+		
+		/>
+
 		<Container fluid="xxl">
 			<Row>
 				<Col>
-					1XORONIM.MOSCOW<br />
-					2XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
+					<br /><br />
+					test fix navbar scroll<br />
 					XORONIM.MOSCOW<br />
 					XORONIM.MOSCOW<br />
 					XORONIM.MOSCOW<br />
@@ -84,12 +106,6 @@ export default function Home({ state, widthDevice } ) {
 				</Col>
 			</Row>
 		</Container>
-
-		<BlockQuestions />
-
-		<BlockShowroom />
-
-		<IndexAbout />
 
 	</>
 	)

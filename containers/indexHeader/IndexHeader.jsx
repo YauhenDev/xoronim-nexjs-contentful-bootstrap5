@@ -36,10 +36,6 @@ export default function IndexHeader({
 	}
 	const widthDevice = useDeviceSize();
 
-	const [isXxl, setIsXxl] = useState(widthDevice);
-	const isxxl = widthDevice < 1400;
-	if (isxxl !== isXxl) setIsXxl(isxxl);
-
 	// Определение телефона по сетке bootstrap 5
 	const [isTablet, setIsTablet] = useState(widthDevice);
 	const istablet = widthDevice < 1200;
@@ -86,8 +82,8 @@ export default function IndexHeader({
 							<Image 
 								src="/assets/img/index_bg/angel.png"
 								layout="fixed"
-								width={ isXxl ? "510" : "658" }
-								height={ isXxl ? "344" : "444" }
+								width="658"
+								height="444"
 							/>
 						</div>
 

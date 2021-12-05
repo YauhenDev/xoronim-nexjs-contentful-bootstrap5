@@ -1,5 +1,67 @@
 @import "@styles/vars";
 
 .wrapper {
+	padding: 4rem 1.5rem;
+}
 
+.row {
+	box-shadow: 0 0 5px $bg-light-purple;
+	border-radius: 2rem;
+}
+
+
+.angelblock {
+	position: relative;
+	height: 250px;
+	z-index: 0;
+	overflow: hidden;
+	border-top-left-radius: 2rem;
+	border-bottom-left-radius: 2rem;
+}
+
+.angel {
+	margin-top: -100px;
+	margin-left: -100px;
+}
+
+
+.txt {
+	padding: 4rem 0 0;
+}
+
+.contact {
+	background-color: $gold;
+	border-top-right-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+}
+
+@media  (max-width: 991px) {
+	.angelblock {
+		height: 220px;
+		border-bottom-left-radius: 0;
+	}
+	.contact {
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 2rem;
+		border-bottom-right-radius: 2rem;
+	}
+}
+@media  (max-width: 767px) {
+	.angelblock {
+		height: 220px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 2rem;
+	}
+	.angel {
+		margin: -100px auto 0 -40px;
+	}
+	.txt {
+		padding: 2rem 1rem 2rem 1rem;
+	}
+	.contact {
+		border-top-left-radius: 2rem;
+		border-top-right-radius: 2rem;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
 }
