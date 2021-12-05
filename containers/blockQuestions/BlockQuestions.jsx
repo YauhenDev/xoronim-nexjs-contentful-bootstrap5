@@ -26,6 +26,7 @@ export default function BlockQuestions({
 						layout="fixed"
 						width="410"
 						height="590"
+						loading="lazy"
 					/>
 				</div>
 

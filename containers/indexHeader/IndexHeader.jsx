@@ -68,6 +68,7 @@ export default function IndexHeader({
 							<Image 
 								src="/assets/img/index_bg/bg_index_header_snd_next.png"
 								layout="fill"
+								loading="lazy"
 								objectFit={ isTablet ? "contain" : "" }
 							/>
 						</div>
@@ -75,6 +76,7 @@ export default function IndexHeader({
 							<Image 
 								src="/assets/img/index_bg/bg_index_header_fst_next.png"
 								layout="fill"
+								loading="lazy"
 							/>
 						</div>
 
@@ -82,8 +84,9 @@ export default function IndexHeader({
 							<Image 
 								src="/assets/img/index_bg/angel.png"
 								layout="fixed"
-								width="658"
-								height="444"
+								loading="lazy"
+								width={ 658 }
+								height={ 444 }
 							/>
 						</div>
 

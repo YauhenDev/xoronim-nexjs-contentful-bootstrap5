@@ -58,55 +58,6 @@ export default function Home({ state, widthDevice } ) {
 		
 		/>
 
-		<Container fluid="xxl">
-			<Row>
-				<Col>
-					<br /><br />
-					test fix navbar scroll<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					XORONIM.MOSCOW<br />
-					
-
-				</Col>
-			</Row>
-		</Container>
-
 	</>
 	)
 }

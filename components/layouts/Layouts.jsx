@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react'
-
 import Head from 'next/head'
 import NextNprogress from 'nextjs-progressbar'
+import { useState, useEffect } from 'react'
 
 import Header from '@components/dumb/header/Header'
 import Navbar from '@components/dumb/navbar/Navbar'
+import Footer from '@components/dumb/footer/Footer'
 
 export default function Layout({ children, state }) {
 
@@ -60,6 +60,10 @@ export default function Layout({ children, state }) {
 		/>
 		
 		{ children }
+
+		<Footer 
+			mainPages={ state.mainPages }
+		/>
 
 	</>
 	)
