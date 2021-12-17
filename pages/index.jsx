@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { Container, Row, Col } from 'react-bootstrap'
 
 import IndexHeader from '@containers/indexHeader/IndexHeader'
 
