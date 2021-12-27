@@ -30,7 +30,7 @@ export default function Layout({ children, state }) {
 	<>
 	
 		<Head>
-			<meta name="theme-color" content="#DFD7B6" />
+			<meta name="theme-color" content="#D7DAE5" />
 			{/* <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon" />
 			<link rel="shortcut icon" href="/assets/favicon/favicon.png" type="image/png" /> */}
 			<link rel="icon" href="/assets/favicon/favicon.svg" />

@@ -26,15 +26,18 @@ export default function Home({ state, widthDevice } ) {
 		</Head>
 
 		<IndexHeader 
-		
+			mainData={ state.mainData }
+			indexHeader={ state.indexHeader }
 		/>
 
 		<IndexTrouble 
-		
+			title={ state.indexBlock.Trouble }
+			indexTrouble={ state.indexTrouble }
 		/>
 
 		<BlockPrice 
-		
+			header={ state.indexBlock.Price }
+			allPrice={ state.allPrice }
 		/>
 
 		<BlockDetails 

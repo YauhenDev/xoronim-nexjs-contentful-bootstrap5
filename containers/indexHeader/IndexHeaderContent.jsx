@@ -1,41 +1,48 @@
 import { Container, Row, Col } from 'react-bootstrap'
+import parse from 'html-react-parser'
 
 import {
 	content,
 	benefits,
-	xl
+	xl,
+	agent
 } from './IndexHeader.module.scss'
 
 export default function IndexHeaderContent({ 
-	mainData
+	mainData,
+	indexHeader
 }) {
+
+	const { h1, p } = indexHeader
 
 	//debugger;
 	return (
 	<Container fluid="xxl" className={ content }>
 		<Row>
 			<Col sm={ 12 } md={ 12 } lg={ 7 } >
-				<h1>Ритуальные услуги в Москве<br />
-				и Московской области</h1>
-				<p>Берём на себя всю организацию и даём возможность <br className={ xl } />
-				достойно попрощаться.</p>
-
+				<h1>
+					{parse(h1)}
+				</h1>
+				<p className={ xl }>
+					{parse(p)}
+				</p>
 				<Row className={ benefits }>
-					<Col>
-						Приезд консультанта
-						в течении часа <strong>круглосуточно</strong>
-					</Col>
-					<Col>
-						Более <strong>3000 </strong>
-						проведенных похорон
-					</Col>
-					<Col>
-						Работа 
-						по <strong>договору</strong>
+					{ indexHeader.indexHeaderBlock.map( (p, i) => (
+						<Col key={ i }>
+							{parse(p.block)}
+						</Col> 
+					))}
+				</Row>
+				<Row>
+					<Col className={ agent }>
+						<a href={`tel:${ mainData.phoneNumber_1 }`} className="btn btn-primary">
+							Консультация
+						</a>
 					</Col>
 				</Row>
 			</Col>
 			<Col>
+				
 			</Col>
 		</Row>
 	</Container>

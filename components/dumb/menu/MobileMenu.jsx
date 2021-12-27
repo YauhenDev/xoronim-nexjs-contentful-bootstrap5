@@ -70,11 +70,13 @@ export default function MobileMenu({
 				<Col>
 
 					<Button
-						className={`btn ${ close }`}
+						className={`${ close }`}
 						data-bs-dismiss="offcanvas" 
 						aria-label="Close"
+						variant="link"
 					>
 							<CloseSVG />
+							{/* <CloseButton /> */}
 					</Button>
 
 				</Col>

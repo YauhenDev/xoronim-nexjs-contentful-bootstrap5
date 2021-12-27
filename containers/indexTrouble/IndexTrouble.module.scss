@@ -8,3 +8,62 @@
 .wrapper {
 	
 }
+
+.cardTrouble {
+	box-shadow: 0 0 10px #bad3e6;
+	border: 1px solid #FFFFFF;
+	border-radius: 0.8rem;
+	background: #eaecf1 url(/assets/img/trouble/bg-trouble.png);
+
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+
+	&:hover {
+		background: $white;
+		box-shadow: 0 0 10px $gold;
+
+		transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+	}
+}
+
+.title {
+	font-size: 2rem;
+	color: $gold;
+}
+
+.text {
+	min-height: 20px;
+}
+
+.footer {
+	border: 0;
+	background-color: transparent;
+	padding-bottom: 1rem;
+}
+
+@media (max-width: 991px) {
+	.text {
+		min-height: 10px;
+	}
+	.cardTrouble {
+		&:hover {
+			transform: none;
+			-webkit-transform: none;
+			-moz-transform: none;
+			-o-transform: none;
+			-ms-transform: none;
+		}
+	}
+}
+
+@media  (max-width: 767px) {
+	.footer {
+		font-size: .9rem;
+	}
+}

@@ -22,12 +22,20 @@ $height-index-header: 444px;
 	}
 }
 
+.agent {
+	padding-top: 2rem;
+}
+
 .parallax {
 	height: $height-index-header;
 	position: relative;
 	overflow: hidden;
-	background-image: url("/assets/img/index_bg/bg_index_header.jpg");
 	background-position: 50% bottom;
+	background-image: url("/assets/img/index_bg/bg_index_header.jpg");
+	background-image: -webkit-image-set(
+		url("/assets/img/index_bg/bg_index_header.webp") 1x,
+		url("/assets/img/index_bg/bg_index_header.webp") 2x
+	);
 }
 
 .angel {
@@ -49,9 +57,6 @@ $height-index-header: 444px;
 	background-position: 50% bottom;
 	z-index: 0;
 }
-/* .parallaxBg0 {
- 	background-image: url("/assets/img/index_bg/bg_index_header.jpg");  
-} */
 
 @media (max-width: 1399px) {
 	.parallax {
@@ -65,10 +70,17 @@ $height-index-header: 444px;
 }
 
 @media (max-width: 1199px) {
-
+	.content {
+		h1 {
+			font-size: 2rem;
+		}
+	}
 }
 
 @media (max-width: 991px) {
+	.content {
+		padding: 2rem 1rem;
+	}
 	.parallax {
 		height: calc($height-index-header - 50px);
 		background-position: 10% 58%;
@@ -80,21 +92,19 @@ $height-index-header: 444px;
 		h1 {
 			font-size: 1.8rem;
 		}
-		p {
-
-		}
-
 	}
-	.benefits {
-
+	.agent {
+		text-align: center;
 	}
 	.xl {
-		display: none;
+		br {
+			display: none;
+		}
 	}
 }
 @media  (max-width: 575px) {
 	.content {
-		padding: 1.5rem 1rem;
+		padding: 2.5rem 1rem;
 		h1 {
 			font-size: 1.4rem;
 		}

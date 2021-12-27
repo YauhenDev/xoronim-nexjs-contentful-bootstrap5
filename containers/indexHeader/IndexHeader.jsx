@@ -17,7 +17,8 @@ import {
 
 
 export default function IndexHeader({ 
-	mainData
+	mainData,
+	indexHeader
 }) {
 
 	const useDeviceSize = () => {
@@ -52,7 +53,10 @@ export default function IndexHeader({
 		<Row className={`g-0 ${parallax}`}>
 			<Col>
 				{ isMobile ? 
-					<IndexHeaderContent />
+					<IndexHeaderContent 
+						mainData={ mainData }
+						indexHeader={ indexHeader }
+					/>
 				: 
 					<BannerAnim>
 						<Element
@@ -90,7 +94,10 @@ export default function IndexHeader({
 							/>
 						</div>
 
-						<IndexHeaderContent />
+						<IndexHeaderContent
+							mainData={ mainData }
+							indexHeader={ indexHeader }
+						/>
 
 						</Element>
 					</BannerAnim>
