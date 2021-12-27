@@ -30,14 +30,14 @@ export default function Layout({ children, state }) {
 	<>
 	
 		<Head>
-			<meta name="theme-color" content="#4985FF" />
+			<meta name="theme-color" content="#DFD7B6" />
 			{/* <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon" />
 			<link rel="shortcut icon" href="/assets/favicon/favicon.png" type="image/png" /> */}
 			<link rel="icon" href="/assets/favicon/favicon.svg" />
 
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content="https://xoronim.moscow/" />
-			<meta property="og:site_name" content="xoronim.moscow" />
+			<meta property="og:site_name" content="XORONIM.moscow" />
 		</Head>
 
 		<NextNprogress 

@@ -7,6 +7,32 @@
 	color: $secondary;
 }
 
+.nav {
+	li {
+		&:first-child {
+			span {
+				display: none;
+			}
+		}
+		span {
+			padding: 0 .5rem;
+			color: $grey;
+		}
+	}
+}
+
+[data-menufix="true"]{
+	.nav {
+		margin-top: .5rem;
+		.sidebarLink {
+			font-size: .9rem;
+		}
+		span {
+			padding: 0 .2rem;
+		}
+	}
+}
+
 .aside {
 	background-color: $primary !important;
 }
@@ -51,6 +77,9 @@
 		li {
 			list-style: none;
 			text-align: left;
+			span {
+				display: none;
+			}
 		}
 	}
 	.sidebarLink {

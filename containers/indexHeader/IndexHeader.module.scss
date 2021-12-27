@@ -6,6 +6,20 @@ $height-index-header: 444px;
 	position: relative;
 	z-index: 1;
 	padding: 4rem 1.5rem;
+	p {
+		font-size: 1.2rem;
+		font-weight: 500;
+		padding: .5rem 0;
+	}
+}
+
+.benefits {
+	margin-top: 1rem;
+	//font-size: 1rem;
+	font-weight: 300;
+	strong {
+		font-weight: 500;
+	}
 }
 
 .parallax {
@@ -35,18 +49,18 @@ $height-index-header: 444px;
 	background-position: 50% bottom;
 	z-index: 0;
 }
-.parallaxBg0 {
+/* .parallaxBg0 {
  	background-image: url("/assets/img/index_bg/bg_index_header.jpg");  
-}
+} */
 
 @media (max-width: 1399px) {
 	.parallax {
-		height: calc($height-index-header - 100px);
+		height: calc($height-index-header - 0px);
 		background-position: left bottom;
 	}
 	.parallaxBg1,
 	.parallaxBg2 {
-		height: calc($height-index-header - 100px);
+		height: calc($height-index-header - 0px);
 	}
 }
 
@@ -55,5 +69,41 @@ $height-index-header: 444px;
 }
 
 @media (max-width: 991px) {
+	.parallax {
+		height: calc($height-index-header - 50px);
+		background-position: 10% 58%;
+	}
+}
 
+@media  (max-width: 767px) {
+	.content {
+		h1 {
+			font-size: 1.8rem;
+		}
+		p {
+
+		}
+
+	}
+	.benefits {
+
+	}
+	.xl {
+		display: none;
+	}
+}
+@media  (max-width: 575px) {
+	.content {
+		padding: 1.5rem 1rem;
+		h1 {
+			font-size: 1.4rem;
+		}
+		p {
+			font-size: 1rem;
+		}
+	}
+	.benefits {
+		font-size: .9rem;
+		line-height: 120%;
+	}
 }

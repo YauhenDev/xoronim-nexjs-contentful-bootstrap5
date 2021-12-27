@@ -52,16 +52,16 @@ export default function Header({
 				// отображать ПОЛНЫЙ NAVBAR
 				<Row>
 					
-						{
-							// Отображать логотип при СКРОЛЕ
-							scroll 
-							? 
-							<Col lg={ 2 } className={ logomobile }>
-								<LinkLogo /> 
-							</Col>
-							: 
-								"" 
-						}
+					{
+						// Отображать логотип при СКРОЛЕ
+						scroll 
+						? 
+						<Col lg={ 2 } className={ logomobile }>
+							<LinkLogo /> 
+						</Col>
+						: 
+							"" 
+					}
 					
 					<Col className="text-center">
 						<Nav className="navbar-expand-lg justify-content-center">
@@ -71,17 +71,18 @@ export default function Header({
 						</Nav>
 					</Col>
 					
-						{
-							// Отображать телефон при СКРОЛЕ
-							scroll 
-							? 
-								<Col lg={ 2 } className={`text-end ${ phone }`} >
-									<PhoneSVG />
-									<Phone mainData={ mainData } />
-								</Col>
-							: 
-								""
-						}
+					{
+						// Отображать телефон при СКРОЛЕ
+						scroll 
+						? 
+							<Col lg={ 2 } className={`text-end ${ phone }`} >
+								<PhoneSVG />
+								<Phone mainData={ mainData } />
+							</Col>
+						: 
+							""
+					}
+
 				</Row>
 			}
 		</Container>			

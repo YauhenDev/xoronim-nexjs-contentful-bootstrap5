@@ -24,14 +24,14 @@ export default function Header({
 				<LinkLogo />
 
 			</Col>
-			<Col xs={ 6 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 3 } className={`pt-1 ${ company}`} >
+			<Col xs={ 7 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 3 } className={`pt-1 ${ company}`} >
 			
 				Официальный сайт<br />
 				Городская ритуальной служба<br />
 				Москва и Московская область
 
 			</Col>
-			<Col xs={ 6 } sm={ 6 } md={ 4 } lg={ 2 } xl={ 2 } className={`pt-1`}>
+			<Col xs={ 5 } sm={ 6 } md={ 4 } lg={ 2 } xl={ 2 } className={`pt-1`}>
 			
 				Более <strong>15 лет</strong><br />
 				профессионального<br />

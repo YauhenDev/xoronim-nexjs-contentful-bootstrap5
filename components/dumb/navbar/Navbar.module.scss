@@ -8,6 +8,7 @@
 	z-index: 2;
 	&[data-menufix="true"] {
 		padding: 10px 0;
+		box-shadow: 0px 0 5px $main;
 	}
 	
 }
@@ -34,6 +35,17 @@
 	a {
 		color: $secondary;
 	}
+}
+
+[data-menufix="true"]{
+	.phone{
+		font-size: .8rem;
+		padding-top: .7rem;
+		svg {
+			width: 16px;
+			margin: -3px 3px 0 0;
+		}
+	}	
 }
 
 

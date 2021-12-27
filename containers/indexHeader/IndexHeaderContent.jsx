@@ -1,7 +1,9 @@
 import { Container, Row, Col } from 'react-bootstrap'
 
 import {
-	content
+	content,
+	benefits,
+	xl
 } from './IndexHeader.module.scss'
 
 export default function IndexHeaderContent({ 
@@ -12,23 +14,24 @@ export default function IndexHeaderContent({
 	return (
 	<Container fluid="xxl" className={ content }>
 		<Row>
-			<Col sm={ 12 } md={ 12 } lg={ 6 } >
+			<Col sm={ 12 } md={ 12 } lg={ 7 } >
 				<h1>Ритуальные услуги в Москве<br />
 				и Московской области</h1>
-				<p>Берём на себя всю организацию и даём возможность
+				<p>Берём на себя всю организацию и даём возможность <br className={ xl } />
 				достойно попрощаться.</p>
-				<Row>
+
+				<Row className={ benefits }>
 					<Col>
 						Приезд консультанта
-						в течении часа круглосуточно
+						в течении часа <strong>круглосуточно</strong>
 					</Col>
 					<Col>
-						Более 3000 
+						Более <strong>3000 </strong>
 						проведенных похорон
 					</Col>
 					<Col>
 						Работа 
-						по договору
+						по <strong>договору</strong>
 					</Col>
 				</Row>
 			</Col>
