@@ -49,6 +49,17 @@ h2 {
 	padding: 2rem 0;
 }
 
+.btn {
+	outline: 0 solid !important;
+	outline-offset: 0px !important;
+	transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) !important;
+	&:hover {
+		outline: 1px solid !important;
+		outline-color: rgba(255, 255, 255, 0) !important;
+		outline-offset: 15px !important;
+	}
+}
+
 .btn-primary {
 	color: $white;
 	background-color: $main;
@@ -56,7 +67,8 @@ h2 {
 	padding: 0.75rem 2rem;
 	border: 0;
 	border-radius: 2rem;
-	
+
+	outline-color: $main !important;
 	&:hover {
 		color: $white;
 		background-color: $secondary;
@@ -64,12 +76,32 @@ h2 {
 	}
 }
 
+.btn-warning {
+	color: $main;
+	background-color: $gold;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 0.75rem 2.5rem;
+	border: 0;
+	border-radius: 2rem;
+
+    outline-color: $gold !important;
+	&:hover {
+		color: $white;
+		background-color: $main;
+		background-size: 0;
+	}
+}
+
+
 .btn-outline-primary {
 	color: $secondary;
 	font-size: 14px;
 	padding: 0.5rem 1.4rem;
 	border-width: 2px;
 	border-radius: 2rem;
+
+	outline-color: $primary !important;
 }
 
 // обнуляем Global style bootstrap
@@ -105,4 +137,26 @@ svg {
 			fill: $primarydark;
 		}
 	}
+}
+
+.swiper {
+	padding-bottom: 10px !important;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
 }

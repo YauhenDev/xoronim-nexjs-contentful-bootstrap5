@@ -5,6 +5,8 @@ import {
 	wrapper
 } from './Footer.module.scss'
 
+const thisYear = new Date();
+
 export default function Footer({ 
 	mainPages
 }) {
@@ -21,7 +23,9 @@ export default function Footer({
 			<Row>
 				<Col xl={ 3 }>
 					logo
-					<span itemProp="copyrightYear">2021</span>
+
+					© 2004 — <span itemProp="copyrightYear">{ thisYear.getFullYear() }</span>
+	
 				</Col>
 				<Col xl={ 3 }>
 					footer

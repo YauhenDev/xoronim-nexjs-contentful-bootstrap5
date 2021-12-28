@@ -14,7 +14,7 @@ import {
 } from './Navbar.module.scss'
 
 
-export default function Header({ 
+export default function Navbar({ 
 	mainData,
 	mainPages,
 	widthDevice
@@ -29,10 +29,10 @@ export default function Header({
 	}, []);
 
 	// Определение телефона по сетке bootstrap 5
+	// для замены меню bootstrap 5 на offcanvas
 	const [isMobile, setIsMobile] = useState(widthDevice);
 	const ismobile = widthDevice < 992;
 	if (ismobile !== isMobile) setIsMobile(ismobile);
-	
 
 	//debugger;
 	return (

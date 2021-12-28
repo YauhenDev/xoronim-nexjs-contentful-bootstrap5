@@ -35,7 +35,7 @@ export default function IndexHeaderContent({
 				</Row>
 				<Row>
 					<Col className={ agent }>
-						<a href={`tel:${ mainData.phoneNumber_1 }`} className="btn btn-primary">
+						<a href={`tel:+${ mainData.phoneNumber_1 }`} className="btn btn-primary">
 							Консультация
 						</a>
 					</Col>

@@ -2,6 +2,7 @@ import ActiveLink  from '@components/ui/links/ActiveLink'
 
 import {
 	nav,
+	item,
 	sidebarLink
 } from './MobileMenu.module.scss'
 
@@ -18,10 +19,9 @@ export default function LinksMenu({
 		{ mainPages.map( (p, i) => (
 			<li 
 				key={ i } 
-				className="nav-item"
+				className={`${ item } nav-item`}
 				itemProp="name"
 			>
-				<span>|</span>
 				<ActiveLink 
 					fuzzy
 					href={ p.pathLink }

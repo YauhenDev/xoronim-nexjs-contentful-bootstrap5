@@ -1,24 +1,35 @@
+import { useState } from 'react'
 import Image from 'next/image'
-import NumberFormat from 'react-number-format'
+import {Container, Row, Col } from 'react-bootstrap'
+import { Swiper, SwiperSlide } from "swiper/react"
+//import { Pagination } from 'swiper'
 
-import {Container, Row, Col, Card } from 'react-bootstrap'
+import CardPrice from './CardPrice'
+
+import "swiper/css"
+//import "swiper/css/pagination"
 
 import {
+	price,
 	block,
 	cloud,
 	wrapper,
 	angel,
-	price,
-	cardPrice,
-	title,
-	text,
-	footer
+	slide
 } from './BlockPrice.module.scss'
 
 export default function BlockPrice({ 
-	header,
-	allPrice
+	phoneNumber, 
+	header, 
+	allPrice, 
+	widthDevice 
 }) {
+
+	// Определение телефона по сетке bootstrap 5
+	// Подменяем блок цен на слайдер
+	const [isMobile, setIsMobile] = useState(widthDevice);
+	const ismobile = widthDevice < 576;
+	if (ismobile !== isMobile) setIsMobile(ismobile);
 
 	//debugger;
 	return (
@@ -39,68 +50,46 @@ export default function BlockPrice({
 						<h2>{ header }</h2>
 					</Col>
 				</Row>
-				<Row className="row row-cols-2 row-cols-lg-4 g-4">
-					{ allPrice.map( (p, i) => (
-						<Col key={ i } className={ price }>
-							
-							<Card 
-								className={`${ cardPrice } `} 
-								itemScope 
-								itemType="http://schema.org/Product"
-							>
-								<Card.Header 
-									className={ title } 
-									itemProp="name"
-								>
 
-									{ p.title }
-
-								</Card.Header>
-								<Card.Body>
-									<Card.Text 
-										className={ text } 
-										itemProp="description"
-									>
-
-										{ p.txt }
-
-									</Card.Text>
-								</Card.Body>
-								<Card.Footer 
-									className={ footer } 
-									itemProp="offers" 
-									itemScope 
-									itemType="http://schema.org/AggregateOffer"
-								>
-									<link 
-										itemProp="availability" 
-										href="http://schema.org/InStock" 
+				{isMobile ?
+					<Row>
+						<Swiper 
+							slidesPerView={ 'auto' } 
+							centeredSlides={ false } 
+							spaceBetween={ 18 } // margin-left=12 ||| 30 - 12 = 18 
+							loop={ true } 
+							//modules={[ Pagination ]}
+							//pagination={{
+							//	"clickable": true
+							//}}
+						>
+							{allPrice.map( (p, i) => (
+								<SwiperSlide key={ i } className={ slide }>
+									<CardPrice 
+										title={ p.title }
+										txt={ p.txt }
+										price={ p.price }
+										phoneNumber={ phoneNumber }
 									/>
-									
-									<NumberFormat 
-										value={ p.price }
-										//format="## ###"
-										thousandsGroupStyle="thousand"
-										thousandSeparator=" "
-										displayType="text"
-										type="text"
-										itemProp="price"
-									/>
-									<span 
-										itemProp="priceCurrency" 
-										content="RUB"
-									> ₽</span>
-									{/* 
-									<span itemProp="lowPrice">600</span> 
-									до 
-									<span itemProp="highPrice">1000</span> 
-									*/}
-								</Card.Footer>
-							</Card>
+								</SwiperSlide>
+							))}
+						</Swiper>
+					</Row>
+				:
+					<Row className="row row-cols-2 row-cols-lg-4 g-4">
+						{allPrice.map( (p, i) => (
+							<Col key={ i } className={ price }>
+								<CardPrice 
+									title={ p.title }
+									txt={ p.txt }
+									price={ p.price }
+									phoneNumber={ phoneNumber }
+								/>
+							</Col>
+						))}
+					</Row>
+				}
 
-						</Col>
-					))}
-				</Row>
 			</Container>
 		</Container>
 	</Container>

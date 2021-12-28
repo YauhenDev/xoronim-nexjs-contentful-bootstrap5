@@ -1,31 +1,13 @@
 import Head from 'next/head'
 import NextNprogress from 'nextjs-progressbar'
-import { useState, useEffect } from 'react'
 
 import Header from '@components/dumb/header/Header'
 import Navbar from '@components/dumb/navbar/Navbar'
 import Footer from '@components/dumb/footer/Footer'
 
-export default function Layout({ children, state }) {
+export default function Layout({ children, state, widthDevice }) {
 
-	//Постоянно смотрим за разрешением 
-	//для замены меню bootstrap 5 на offcanvas
-	const useDeviceSize = () => {
-
-		const [widthDevice, setWidthDevice] = useState(0)
-		const handleWindowResize = () => {
-			setWidthDevice(window.innerWidth);
-		}
-		useEffect(() => {
-			handleWindowResize();
-			window.addEventListener('resize', handleWindowResize);
-			return () => window.removeEventListener('resize', handleWindowResize);
-		}, []);
-
-		return widthDevice
-	}
-	const widthDevice = useDeviceSize();
-
+	//debugger;
 	return (
 	<>
 	
@@ -50,7 +32,6 @@ export default function Layout({ children, state }) {
 		/>
 
 		<Header 
-			widthDevice={ widthDevice }
 			mainData={ state.mainData }
 		/>
 

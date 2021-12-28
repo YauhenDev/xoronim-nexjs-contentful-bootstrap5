@@ -16,6 +16,7 @@ export default function Home({ state, widthDevice } ) {
 	const i = 0
 	const { seoTitle, seoDescription } = state.mainPages[i]
 
+	//debugger;
 	return (
 	<>
 		<Head>
@@ -36,8 +37,10 @@ export default function Home({ state, widthDevice } ) {
 		/>
 
 		<BlockPrice 
+			phoneNumber={ state.mainData.phoneNumber_1 }
 			header={ state.indexBlock.Price }
 			allPrice={ state.allPrice }
+			widthDevice={ widthDevice }
 		/>
 
 		<BlockDetails 
