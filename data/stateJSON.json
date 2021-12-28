@@ -1,75 +1,97 @@
 {
 	"mainData" : {
-		"nameSite": "dev XORONIM",
-		"nameCompanyFull": "",
-		"nameCompanyShort": "",
+		"nameSite"			: "dev XORONIM",
+		"nameCompanyFull"	: "",
+		"nameCompanyShort"	: "",
 		"legalFullDescription": "",
-		"legalFullMode": "",
-		"legalFullBank": "",
-		"legalShortAdr": "",
-		"phoneNumber_1": "71231234567",
-		"targetKonv_1": "",
-		"phoneNumber_2": "",
-		"targetKonv_2": "",
-		"email": "info@xoronim.moscow",
-		"targetKonv_email": ""
+		"legalFullMode"		: "",
+		"legalFullBank"		: "",
+		"legalShortAdr"		: "",
+		"phoneNumber_1"		: "71231234567",
+		"targetKonv_1"		: "",
+		"phoneNumber_2"		: "",
+		"targetKonv_2"		: "",
+		"email"				: "info@xoronim.moscow",
+		"targetKonv_email"	: ""
 	},
+	"allPrice": [
+		{	"url"	: "/services/",
+			"title"	: "Социальные похороны",
+			"txt"	: "Безвозмездные похороны — это услуга, предоставляемая по наличию документов на социальное погребение",
+			"price"	: 13800
+		},
+		{	"url" 	: "/services/",
+			"title"	: "Стандартные похороны",
+			"txt"	: "Похороны категории Стандарт — это самая востребованная услуга нашей компании. И стоимость, и качество предоставляемых услуг рассчитаны на средние доходы граждан",
+			"price"	: 23300
+		},
+		{	"url"	: "/services/",
+			"title"	: "Премиум похороны",
+			"txt"	: "Организация Премиум похорон является одним из профильных видов деятельности. Наши специалисты профессионально устраивают похороны премиум-уровня, надежно оградив родных и близких усопшего от излишних затрат сил и нервов.",
+			"price"	: 38250
+		},
+		{	"url"	: "/services/",
+			"title"	: "Элитные похороны",
+			"txt"	: "В нашей компании работают настоящие профессионалы, авторитетные специалисты. Мы гарантируем точность и оперативность исполнения всех действий, сжатые сроки оформления документов и полное соответствие ритуала вашим пожеланиям.",
+			"price"	: 38250
+		}
+	],
 	"mainPages": [
-		{	"id": 0,
-			"nameLink": "Главная",
-			"titleLink": "На главную",
-			"seoTitle": "seoTitle",
+		{	"id"		: 0,
+			"nameLink"	: "Главная",
+			"titleLink"	: "На главную",
+			"seoTitle"	: "seoTitle",
 			"seoDescription" : "seoDescription",
-			"pathLink": "/"
+			"pathLink"	: "/"
 		},
-		{	"id": 1,
-			"nameLink": "Порядок действий",
-			"titleLink": "Порядок действий",
-			"seoTitle": "seoTitle",
+		{	"id"		: 1,
+			"nameLink"	: "Порядок действий",
+			"titleLink"	: "Порядок действий",
+			"seoTitle"	: "seoTitle",
 			"seoDescription" : "seoDescription",
-			"pathLink": "/procedure"
+			"pathLink"	: "/procedure"
 		},
-		{	"id": 2,
-			"nameLink": "Услуги",
-			"titleLink": "Услуги",
-			"seoTitle": "seoTitle",
+		{	"id"		: 2,
+			"nameLink"	: "Услуги",
+			"titleLink"	: "Услуги",
+			"seoTitle"	: "seoTitle",
 			"seoDescription" : "seoDescription",
-			"pathLink": "/services"
+			"pathLink"	: "/services"
 		},
-		{	"id": 3,
-			"nameLink": "Ритуальные принадлежности",
-			"titleLink": "Ритуальные принадлежности",
-			"seoTitle": "seoTitle",
+		{	"id"		: 3,
+			"nameLink"	: "Ритуальные принадлежности",
+			"titleLink"	: "Ритуальные принадлежности",
+			"seoTitle"	: "seoTitle",
 			"seoDescription" : "seoDescription",
-			"pathLink": "/accessories"
+			"pathLink"	: "/accessories"
 		},
-		{	"id": 4,
-			"nameLink": "Выставочный зал",
-			"titleLink": "Выставочный зал",
-			"seoTitle": "seoTitle",
+		{	"id"		: 4,
+			"nameLink"	: "Выставочный зал",
+			"titleLink"	: "Выставочный зал",
+			"seoTitle"	: "seoTitle",
 			"seoDescription" : "seoDescription",
-			"pathLink": "/showroom"
+			"pathLink"	: "/showroom"
 		}
 	],
 	"indexBlock": {
-		"Trouble" : "Что делать, если случилась беда?",
-		"Price" : "Стоимость услуг",
-		"Details" : "Детали",
-		"Services" : "Ритуальные услуги",
-		"Questions" : "Остались вопросы?",
-		"Photos" : "Выставочный зал",
-		"About" : "О нас"
+		"Trouble"	: "Что делать, если случилась беда?",
+		"Price"		: "Стоимость услуг",
+		"Details"	: "Детали",
+		"Services"	: "Ритуальные услуги",
+		"Questions"	: "Остались вопросы?",
+		"Photos"	: "Выставочный зал",
+		"About"		: "О нас"
 
 	},
 	"indexHeader": {
-		"h1" : "Ритуальные услуги в Москве<br />и Московской области",
-		"p" : "Берём на себя всю организацию и даём возможность<br />достойно попрощаться.",
+		"h1"	: "Ритуальные услуги в Москве<br />и Московской области",
+		"p"		: "Берём на себя всю организацию и даём возможность<br />достойно попрощаться.",
 		"indexHeaderBlock": [
 			{
 				"block" : "Приезд консультанта в течении часа <strong>круглосуточно</strong>"
 			},
 			{
-				"block" : "Более <strong>3000 </strong> проведенных похорон"
+				"block" : "Более <strong>3000</strong> проведенных похорон"
 			},
 			{
 				"block" : "Работа по <strong>договору</strong>"
@@ -77,7 +99,7 @@
 		]
 	},
 	"indexTrouble": [
-		{	"h": "01",
+		{	"h"	: "01",
 			"txt": "Обратитесь к<br />похоронному бюро"
 		},
 		{	"h": "02",
@@ -88,28 +110,6 @@
 		},
 		{	"h": "04",
 			"txt": "Проведите<br />похороны"
-		}
-	],
-	"allPrice": [
-		{	"url" : "/services/",
-			"title": "Социальные похороны",
-			"txt": "Безвозмездные похороны — это услуга, предоставляемая по наличию документов на социальное погребение",
-			"price" : 13800
-		},
-		{	"url" : "/services/",
-			"title": "Стандартные похороны",
-			"txt": "Похороны категории Стандарт — это самая востребованная услуга нашей компании. И стоимость, и качество предоставляемых услуг рассчитаны на средние доходы граждан",
-			"price" : 23300
-		},
-		{	"url" : "/services/",
-			"title": "Премиум похороны",
-			"txt": "",
-			"price" : 38250
-		},
-		{	"url" : "/services/",
-			"title": "Элитные похороны",
-			"txt": "В нашей компании работают настоящие профессионалы, авторитетные специалисты. Мы гарантируем точность и оперативность исполнения всех действий, сжатые сроки оформления документов и полное соответствие ритуала вашим пожеланиям.",
-			"price" : 38250
 		}
 	]
 }

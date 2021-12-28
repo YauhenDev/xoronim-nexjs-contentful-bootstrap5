@@ -10,9 +10,17 @@ export default function LinksMenu({
 }) {
 
 	return (
-	<ul className={`${ nav } navbar-nav`}>
+	<ul 
+		className={`${ nav } navbar-nav`} 
+		itemScope 
+		itemType="https://schema.org/SiteNavigationElement"
+	>
 		{ mainPages.map( (p, i) => (
-			<li key={ i } className="nav-item">
+			<li 
+				key={ i } 
+				className="nav-item"
+				itemProp="name"
+			>
 				<span>|</span>
 				<ActiveLink 
 					fuzzy
@@ -21,6 +29,7 @@ export default function LinksMenu({
 					<a 
 						title={ p.titleLink }
 						className={ sidebarLink }
+						itemProp="url"
 					>
 						{ p.nameLink }
 					</a>

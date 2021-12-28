@@ -8,7 +8,7 @@ import {
 	cloud,
 	wrapper,
 	angel,
-	prices,
+	price,
 	cardPrice,
 	title,
 	text,
@@ -41,43 +41,60 @@ export default function BlockPrice({
 				</Row>
 				<Row className="row row-cols-2 row-cols-lg-4 g-4">
 					{ allPrice.map( (p, i) => (
-						<Col key={ i } className={ prices }>
+						<Col key={ i } className={ price }>
 							
-							<Card className={`${ cardPrice } `} itemscope itemtype="http://schema.org/Product">
-								<Card.Header className={ title } itemprop="name">
+							<Card 
+								className={`${ cardPrice } `} 
+								itemScope 
+								itemType="http://schema.org/Product"
+							>
+								<Card.Header 
+									className={ title } 
+									itemProp="name"
+								>
 
 									{ p.title }
 
 								</Card.Header>
 								<Card.Body>
-									<Card.Text className={ text } itemprop="description">
+									<Card.Text 
+										className={ text } 
+										itemProp="description"
+									>
 
 										{ p.txt }
 
 									</Card.Text>
 								</Card.Body>
-								<Card.Footer className={ footer } itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
-
-									<meta itemprop="priceCurrency" content="RUB" />
-									<link itemprop="availability" href="http://schema.org/InStock" />
+								<Card.Footer 
+									className={ footer } 
+									itemProp="offers" 
+									itemScope 
+									itemType="http://schema.org/AggregateOffer"
+								>
+									<link 
+										itemProp="availability" 
+										href="http://schema.org/InStock" 
+									/>
 									
 									<NumberFormat 
 										value={ p.price }
+										//format="## ###"
 										thousandsGroupStyle="thousand"
 										thousandSeparator=" "
-										//format="## ###"
 										displayType="text"
 										type="text"
-										itemprop="price"
-										
-									/> ₽
-
+										itemProp="price"
+									/>
+									<span 
+										itemProp="priceCurrency" 
+										content="RUB"
+									> ₽</span>
 									{/* 
-									<span itemprop="lowPrice">600</span> 
+									<span itemProp="lowPrice">600</span> 
 									до 
-									<span itemprop="highPrice">1000</span> 
+									<span itemProp="highPrice">1000</span> 
 									*/}
-
 								</Card.Footer>
 							</Card>
 

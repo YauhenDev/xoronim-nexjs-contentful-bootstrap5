@@ -43,7 +43,7 @@ $price-mobile-height: calc($price-block-height - 100px);
 	min-height: $price-block-height;
 }
 
-.prices {
+.price {
 	&:nth-child(2) {
 		.cardPrice {
 			min-height: calc($price-block-height + 60px);
@@ -83,7 +83,7 @@ $price-mobile-height: calc($price-block-height - 100px);
 		min-height: $price-mobile-height;
 	}
 	
-	.prices {
+	.price {
 		&:nth-child(2) {
 			.cardPrice {
 				min-height: $price-mobile-height;
