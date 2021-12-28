@@ -43,28 +43,40 @@ export default function BlockPrice({
 					{ allPrice.map( (p, i) => (
 						<Col key={ i } className={ prices }>
 							
-							<Card className={`${ cardPrice } `}>
-								<Card.Header className={ title }>
+							<Card className={`${ cardPrice } `} itemscope itemtype="http://schema.org/Product">
+								<Card.Header className={ title } itemprop="name">
 
 									{ p.title }
 
 								</Card.Header>
 								<Card.Body>
-									
-									<Card.Text className={ text }>
+									<Card.Text className={ text } itemprop="description">
 
 										{ p.txt }
 
 									</Card.Text>
 								</Card.Body>
-								<Card.Footer className={ footer }>
+								<Card.Footer className={ footer } itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
 
-								<NumberFormat 
-									value={ p.price }
-									format="## ### ₽"
-									displayType="text"
-								/>
+									<meta itemprop="priceCurrency" content="RUB" />
+									<link itemprop="availability" href="http://schema.org/InStock" />
+									
+									<NumberFormat 
+										value={ p.price }
+										thousandsGroupStyle="thousand"
+										thousandSeparator=" "
+										//format="## ###"
+										displayType="text"
+										type="text"
+										itemprop="price"
+										
+									/> ₽
 
+									{/* 
+									<span itemprop="lowPrice">600</span> 
+									до 
+									<span itemprop="highPrice">1000</span> 
+									*/}
 
 								</Card.Footer>
 							</Card>

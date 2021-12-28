@@ -13,7 +13,12 @@
 	box-shadow: 0 0 10px #bad3e6;
 	border: 1px solid #FFFFFF;
 	border-radius: 0.8rem;
-	background: #eaecf1 url(/assets/img/trouble/bg-trouble.png);
+	background-color: #eaecf1; 
+	background-image: url(/assets/img/trouble/bg-trouble.png);
+	background-image: -webkit-image-set(
+		url("/assets/img/trouble/bg-trouble.webp") 1x,
+		url("/assets/img/trouble/bg-trouble.webp") 2x
+	);
 
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
