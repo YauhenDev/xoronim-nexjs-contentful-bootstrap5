@@ -77,7 +77,9 @@ export default function Navbar({
 						? 
 							<Col lg={ 2 } className={`text-end ${ phone }`} >
 								<PhoneSVG />
-								<Phone mainData={ mainData } />
+								<Phone 
+									phone={ mainData.phoneNumber_1 }
+								/>
 							</Col>
 						: 
 							""

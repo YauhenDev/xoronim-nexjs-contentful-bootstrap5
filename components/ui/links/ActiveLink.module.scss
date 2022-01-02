@@ -9,6 +9,7 @@
 		content: "";
 		height: 100%;
 		width: 100%;
+		background-color: transparent !important;
 		background-image: linear-gradient(to top, $gold 25%, transparent 40%);
 		position: absolute;
 		left: 0;
@@ -27,11 +28,11 @@
 @media (max-width: 991px) {
 	.active {
 		color: $black;
-		&::before {
-			background-image: linear-gradient(to top, $gold 0%, $gold 100%);
-		}
+		background-color: $gold;
+		background-image: linear-gradient(to top, $gold 0%, $gold 100%) !important;
 		&:hover {
-			background-size: 0 0;
+			background-color: $gold;
+			background-image: linear-gradient(to top, $gold 0%, $gold 100%) !important;
 		}
 	}
 }

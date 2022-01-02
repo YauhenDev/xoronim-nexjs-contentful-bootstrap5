@@ -1,12 +1,12 @@
 @import "@styles/vars";
 
 .link {
-	display: block;
+	display: block !important;
     float: right;
 	margin-top: 8px;
-	&:hover{
-		background-size: 0 0;
-	}
+	// &:hover{
+	// 	background-size: 0 0;
+	// }
 	svg {
 		width: 18px;
 	}
@@ -14,6 +14,7 @@
 
 .pulse, 
 .phone {
+	display: block;
 	position: absolute;
 	width: 30px;
 	height: 30px;
@@ -31,7 +32,6 @@
 	transition: .5s;
 	&:hover {
 		background: $black;
-		
 	}
 	&::before,
 	&::after {

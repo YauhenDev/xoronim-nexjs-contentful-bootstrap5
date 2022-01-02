@@ -5,7 +5,6 @@
 	font-size: 16px;
 	font-weight: 400;
 	color: $secondary;
-	
 }
 
 .item {
@@ -94,10 +93,14 @@
 		font-size: 1.2rem;
 		color: $main;
 		display: block;
-		background-image: linear-gradient(to top, $gold 20%, transparent 80%);
+		background-color: transparent;
 		&:hover {
 			color: $black;
-			background-size: 100% 100%;
+			//background-color: transparent;
+			&:before {
+				width: 0;
+				left: 0;
+			}
 		}
 	}
 }

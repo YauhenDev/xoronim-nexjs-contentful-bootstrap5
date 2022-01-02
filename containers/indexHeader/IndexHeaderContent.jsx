@@ -1,4 +1,4 @@
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import parse from 'html-react-parser'
 
 import {
@@ -9,7 +9,7 @@ import {
 } from './IndexHeader.module.scss'
 
 export default function IndexHeaderContent({ 
-	mainData,
+	setmodalShow,
 	indexHeader
 }) {
 
@@ -35,9 +35,13 @@ export default function IndexHeaderContent({
 				</Row>
 				<Row>
 					<Col className={ agent }>
-						<a href={`tel:+${ mainData.phoneNumber_1 }`} className="btn btn-primary">
+						<Button 
+							//href={`tel:+${ mainData.phoneNumber_1 }`} 
+							variant="primary" 
+							onClick={() => setmodalShow(true)}
+						>
 							Консультация
-						</a>
+						</Button>
 					</Col>
 				</Row>
 			</Col>

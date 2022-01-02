@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
-import Layout from '@components/layouts/Layouts'
 import TagManager from 'react-gtm-module'
+
+import Layout from '@components/layouts/Layouts'
+import ContactsModal from '@components/dumb/modal/ContactsModal'
+
 
 import '@styles/app.scss'
 
@@ -33,19 +36,30 @@ function Application({ Component, pageProps }) {
 		return widthDevice
 	}
 	const widthDevice = useDeviceSize();
-	
 
+	//Состояние модального окна
+	const [modalShow, setmodalShow] = useState(false);
+	
 	//debugger;
 	return (
 		<Layout
 			state={ state }
 			widthDevice={ widthDevice }
+			setmodalShow={setmodalShow}
 		>
+
 			<Component 
 				{...pageProps}
 				state={ state }
 				widthDevice={ widthDevice }
+				setmodalShow={ setmodalShow}
 			/>
+
+			<ContactsModal	
+				modalShow={ modalShow }
+				setmodalShow={ setmodalShow }
+			/>
+
 		</Layout>
 	)
 }

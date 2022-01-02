@@ -1,15 +1,15 @@
 import NumberFormat from 'react-number-format'
 
 export default function Phone({ 
-	mainData
+	phone
 }) {
 
 	//debugger;
 	return (
 	<>
-		<a href={`tel:+${ mainData.phoneNumber_1 }`}>
+		<a href={`tel:+${ phone }`}>
 			<NumberFormat 
-				value={ mainData.phoneNumber_1 }
+				value={ phone }
 				format="+# (###) ### ## ##"
 				displayType="text"
 			/>

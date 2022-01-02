@@ -1,6 +1,6 @@
+import Link from 'next/link'
 import NumberFormat from 'react-number-format'
-
-import { Card } from 'react-bootstrap'
+import { Button, Card } from 'react-bootstrap'
 
 import {
 	cardPrice,
@@ -10,10 +10,12 @@ import {
 } from './BlockPrice.module.scss'
 
 export default function CardPrice({ 
-	phoneNumber,
+	url,
 	title,
 	txt,
-	price
+	low,
+	price,
+	setmodalShow
 }) {
 
 	return (
@@ -23,6 +25,7 @@ export default function CardPrice({
 		itemType="http://schema.org/Product"
 	>
 		<Card.Header 
+			as="h3"
 			className={ header } 
 			itemProp="name"
 		>
@@ -37,8 +40,18 @@ export default function CardPrice({
 			>
 
 				{ txt }
-
 			</Card.Text>
+			<p className="pt-1 text-center">
+				<Link 
+					href={ url }
+				>
+					<a 
+						title={`Узнать подробнее про услугу — ${ title }`}
+					>
+						подробнее ›
+					</a>
+				</Link>
+			</p>
 		</Card.Body>
 		<Card.Footer 
 			className={ footer } 
@@ -46,15 +59,17 @@ export default function CardPrice({
 			itemScope 
 			itemType="http://schema.org/AggregateOffer"
 		>
-			
+			<span>
+				{ low }
+			</span>
 			<NumberFormat 
-				value={ price }
-				//format="## ###"
-				displayType="text"
-				type="text"
-				thousandsGroupStyle="thousand"
-				thousandSeparator=" "
-				suffix=" ₽"
+				value={ price }					// значение
+				//format="## ###"				// отключаем маску
+				displayType="text"				// отображать как <span>
+				type="text"						// текстовое
+				thousandsGroupStyle="thousand"	// деление по тысячам
+				thousandSeparator=" "			// разделитель  между тысячами
+				suffix=" ₽"						// установаить после значения
 				
 				itemProp="price"
 			/>
@@ -70,14 +85,16 @@ export default function CardPrice({
 				itemProp="priceCurrency" 
 				content="RUB"
 			> ₽</span> */}
-
-			<a 
-				href={`tel:+${ phoneNumber }`} 
-				className="btn btn-warning"
+			
+			<br />
+			<Button 
+				//className="btn btn-warning"
+				variant="warning"
 				title={`Заказать услугу — ${ title } `}
+				onClick={() => setmodalShow(true)}
 			>
 				Заказать услугу
-			</a>
+			</Button>
 			{/* 
 			<span itemProp="lowPrice">600</span> 
 			до 

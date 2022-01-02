@@ -22,7 +22,8 @@ export default function BlockPrice({
 	phoneNumber, 
 	header, 
 	allPrice, 
-	widthDevice 
+	widthDevice,
+	setmodalShow 
 }) {
 
 	// Определение телефона по сетке bootstrap 5
@@ -65,11 +66,14 @@ export default function BlockPrice({
 						>
 							{allPrice.map( (p, i) => (
 								<SwiperSlide key={ i } className={ slide }>
-									<CardPrice 
+									<CardPrice
+										url={ p.url }
 										title={ p.title }
 										txt={ p.txt }
+										low={ p.low }
 										price={ p.price }
 										phoneNumber={ phoneNumber }
+										setmodalShow={ setmodalShow }
 									/>
 								</SwiperSlide>
 							))}
@@ -80,10 +84,13 @@ export default function BlockPrice({
 						{allPrice.map( (p, i) => (
 							<Col key={ i } className={ price }>
 								<CardPrice 
+									url={ p.url }
 									title={ p.title }
 									txt={ p.txt }
+									low={ p.low }
 									price={ p.price }
 									phoneNumber={ phoneNumber }
+									setmodalShow={ setmodalShow }
 								/>
 							</Col>
 						))}

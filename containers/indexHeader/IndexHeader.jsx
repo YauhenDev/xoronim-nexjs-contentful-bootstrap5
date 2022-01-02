@@ -18,6 +18,7 @@ import {
 
 export default function IndexHeader({ 
 	mainData,
+	setmodalShow,
 	indexHeader
 }) {
 
@@ -46,7 +47,6 @@ export default function IndexHeader({
 	const ismobile = widthDevice < 992;
 	if (ismobile !== isMobile) setIsMobile(ismobile);
 
-
 	//debugger;
 	return (
 	<Container fluid className="p-0">
@@ -56,6 +56,7 @@ export default function IndexHeader({
 					<IndexHeaderContent 
 						mainData={ mainData }
 						indexHeader={ indexHeader }
+						setmodalShow={ setmodalShow }
 					/>
 				: 
 					<BannerAnim>
@@ -97,6 +98,7 @@ export default function IndexHeader({
 						<IndexHeaderContent
 							mainData={ mainData }
 							indexHeader={ indexHeader }
+							setmodalShow={ setmodalShow }
 						/>
 
 						</Element>

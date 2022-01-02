@@ -5,7 +5,12 @@ import Header from '@components/dumb/header/Header'
 import Navbar from '@components/dumb/navbar/Navbar'
 import Footer from '@components/dumb/footer/Footer'
 
-export default function Layout({ children, state, widthDevice }) {
+export default function Layout({ 
+	children, 
+	state, 
+	widthDevice, 
+	setmodalShow 
+}) {
 
 	//debugger;
 	return (
@@ -13,7 +18,6 @@ export default function Layout({ children, state, widthDevice }) {
 	
 		<Head>
 			<meta name="theme-color" content="#D7DAE5" />
-			{/* <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon" /> */}
 			<link rel="shortcut icon" href="/assets/favicon/favicon.png" type="image/png" />
 			<link rel="icon" href="/assets/favicon/favicon.svg" />
 
@@ -33,6 +37,7 @@ export default function Layout({ children, state, widthDevice }) {
 
 		<Header 
 			mainData={ state.mainData }
+			setmodalShow={ setmodalShow }
 		/>
 
 		<Navbar

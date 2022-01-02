@@ -12,7 +12,8 @@ import {
 } from './Header.module.scss'
 
 export default function Header({ 
-	mainData
+	mainData,
+	setmodalShow
 }) {
 
 	//debugger;
@@ -45,7 +46,12 @@ export default function Header({
 			<Col md={ 4 } lg={ 2 } xl={ 2 } className="d-none d-md-block pt-1" >
 			
 				
-				<Button variant="outline-primary">Вызвать агента</Button>
+				<Button 
+					variant="outline-primary" 
+					onClick={() => setmodalShow(true)}
+				>
+					Вызвать агента
+				</Button>
 
 			</Col>
 			<Col lg={ 3 } xl={ 3 }  className={`d-none d-lg-block text-center ${ phone }`}>
@@ -53,7 +59,7 @@ export default function Header({
 				<small>Круглосуточная горячая линия:</small>
 				<PhoneSVG />
 				<Phone 
-					mainData={ mainData }
+					phone={ mainData.phoneNumber_1 }
 				/>
 
 			</Col>
