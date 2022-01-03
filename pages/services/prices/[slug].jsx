@@ -15,7 +15,6 @@ const client = createClient({
 })
 
 export const getStaticPaths = async() => {
-
 	const priceUslug = await client.getEntries({
 		content_type: 'priceServices'
 	})
@@ -27,15 +26,10 @@ export const getStaticPaths = async() => {
 			}
 		}
 	})
-
 	return {
 		paths,
 		fallback: false,
-		// props: {
-		// 	priceUslug: priceUslug.items
-		// }
 	}
-
 }
 
 export async function getStaticProps({ params }) {
@@ -45,15 +39,30 @@ export async function getStaticProps({ params }) {
 		'fields.slug': params.slug
 	})
 
+	//************ USLUGI */
+	const prices = await client.getEntries({ 
+		content_type: 'priceServices'
+	})
+	//************ USLUGI */
+
 	return {
 		props: {
-			priceServices: items[0]
+			priceServices: items[0],
+			//************ USLUGI */
+			uslugiPrice: prices.items
+			//************ USLUGI */
 		}
 	}
 
 }
 
-export default function RecipeDetails({ state, priceServices, widthDevice, setmodalShow }) {
+export default function RecipeDetails({ 
+	state, 
+	priceServices, 
+	widthDevice, 
+	setmodalShow,
+	uslugiPrice
+}) {
 
 	const { asPath } = useRouter()
 	const { heading, price, fullDescription } = priceServices.fields
@@ -88,13 +97,13 @@ export default function RecipeDetails({ state, priceServices, widthDevice, setmo
 				</Row>
 			</Container>
 
-			{/* <BlockPrice 
+			<BlockPrice 
 				phoneNumber={ state.mainData.phoneNumber_1 }
 				header={ state.indexPrice.h2 }
-				//priceUslug={ priceUslug }
+				priceUslug={ uslugiPrice }
 				widthDevice={ widthDevice }
 				setmodalShow={ setmodalShow }
-			/> */}
+			/>
 
 		</>
 	)

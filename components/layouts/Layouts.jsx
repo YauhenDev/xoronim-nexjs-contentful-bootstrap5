@@ -1,28 +1,24 @@
 import { useRouter } from 'next/router'
-import { useState, useEffect } from "react";
 
 import Head from 'next/head'
 import NextNprogress from 'nextjs-progressbar'
 
 import Header from '@components/dumb/header/Header'
 import Navbar from '@components/dumb/navbar/Navbar'
+import YandexMap from '@containers/yandexMap/YandexMap'
 import Footer from '@components/dumb/footer/Footer'
+
 
 export default function Layout({ 
 	children, 
 	state, 
-	widthDevice, 
+	widthDevice,
 	setmodalShow 
 }) {
 
 	const asPath = useRouter()
 
-	useEffect(() => {
-        console.log(window.location.hostname) 
-        console.log(window.location.href)
-        //console.log(asPath)
-    }, [])
-
+	//console.log( children[0]. )
 	//debugger;
 	return (
 	<>
@@ -57,9 +53,25 @@ export default function Layout({
 			widthDevice={ widthDevice }
 		/>
 
-		{/* {asPath.pathname == '/services' ? '1111' : '2222'} */}
-		
 		{ children }
+
+		{/*
+			asPath.pathname == '/' 
+			? 
+				<>
+					111
+					{ children }
+					111
+				</>
+			: 
+				<>
+					222
+					{ children }
+					222
+				</>
+		*/ }
+
+		<YandexMap />
 
 		<Footer 
 			mainPages={ state.mainPages }
