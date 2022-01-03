@@ -18,14 +18,19 @@ export async function getStaticProps( ) {
 		accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 	})
 
-	const res = await client.getEntries({ 
-			content_type: 'umer-chelovek-chto-delat',
+	const details = await client.getEntries({ 
+		content_type: 'umer-chelovek-chto-delat'
+	})
+
+	const prices = await client.getEntries({ 
+		content_type: 'priceServices'
 	})
 
 	return {
 		props: {
-			chtoDelat: res.items,
-		},
+			chtoDelat: details.items,
+			priceUslug: prices.items
+		}
 		//revalidate: 10 //Обновлять раз в 10 секунд
 	}
 }
@@ -34,8 +39,9 @@ export default function Home({
 	state,
 	widthDevice,
 	setmodalShow,
+	priceUslug,
 	chtoDelat
- } ) {
+ }) {
 
 	const i = 0
 	const { seoTitle, seoDescription } = state.mainPages[i]
@@ -57,14 +63,13 @@ export default function Home({
 		/>
 
 		<IndexTrouble 
-			title={ state.indexBlock.Trouble }
 			indexTrouble={ state.indexTrouble }
 		/>
 
 		<BlockPrice 
 			phoneNumber={ state.mainData.phoneNumber_1 }
-			header={ state.indexBlock.Price }
-			allPrice={ state.allPrice }
+			header={ state.indexPrice.h2 }
+			priceUslug={ priceUslug }
 			widthDevice={ widthDevice }
 			setmodalShow={ setmodalShow }
 		/>

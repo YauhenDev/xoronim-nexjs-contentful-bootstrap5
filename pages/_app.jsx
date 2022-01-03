@@ -4,7 +4,6 @@ import TagManager from 'react-gtm-module'
 import Layout from '@components/layouts/Layouts'
 import ContactsModal from '@components/dumb/modal/ContactsModal'
 
-
 import '@styles/app.scss'
 
 import state from 'data/stateJSON.json'
@@ -39,7 +38,7 @@ function Application({ Component, pageProps }) {
 
 	//Состояние модального окна
 	const [modalShow, setmodalShow] = useState(false);
-	
+
 	//debugger;
 	return (
 		<Layout

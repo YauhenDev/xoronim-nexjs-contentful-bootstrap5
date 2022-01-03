@@ -8,8 +8,7 @@ import {
 } from './IndexTrouble.module.scss'
 
 export default function IndexTrouble({ 
-	indexTrouble,
-	title
+	indexTrouble
 }) {
 
 	//debugger;
@@ -19,12 +18,12 @@ export default function IndexTrouble({
 			<Row>
 				<Col xl={ 12 }>
 					<h2>
-						{ title }
+						{ indexTrouble.h2 }
 					</h2>
 				</Col>
 			</Row>
 			<Row className="row row-cols-2 row-cols-lg-4 g-4">
-				{ indexTrouble.map( (p, i) => (
+				{ indexTrouble.indexTroubleBlock.map( (p, i) => (
 					<IndexTroubleCard 
 						key={ i }
 						h={ p.h }

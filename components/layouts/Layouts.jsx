@@ -1,3 +1,6 @@
+import { useRouter } from 'next/router'
+import { useState, useEffect } from "react";
+
 import Head from 'next/head'
 import NextNprogress from 'nextjs-progressbar'
 
@@ -11,6 +14,14 @@ export default function Layout({
 	widthDevice, 
 	setmodalShow 
 }) {
+
+	const asPath = useRouter()
+
+	useEffect(() => {
+        console.log(window.location.hostname) 
+        console.log(window.location.href)
+        //console.log(asPath)
+    }, [])
 
 	//debugger;
 	return (
@@ -45,6 +56,8 @@ export default function Layout({
 			mainPages={ state.mainPages }
 			widthDevice={ widthDevice }
 		/>
+
+		{/* {asPath.pathname == '/services' ? '1111' : '2222'} */}
 		
 		{ children }
 

@@ -132,7 +132,7 @@ h4 {
 
 .accordion-item {
 	border: 1px solid;
-	border-image-slice: 1;
+	border-image-slice: 0 0 1 0 !important;
 	border-width: 1px;
 	border-image-source: linear-gradient(90deg, 
 		rgba(51,66,66,0) 0%, 
@@ -143,18 +143,30 @@ h4 {
 	&:hover {
 		color: $black;
 		border-image-source: linear-gradient(90deg, 
-			rgba(51,66,66,.4) 0%, 
-			rgba(51,66,66,.4) 5%, 
-			rgba(51,66,66,.4) 95%, 
+			rgba(51,66,66,0) 0%, 
 			rgba(51,66,66,0) 100%);
-		button {
-			//background-color: $primary;
-		}
 	}
 }
+
 .accordion-button {
+	border-radius: .8rem !important;
 	&[aria-expanded="true"] {
 		background-color: $primary;
+	}
+	&:hover {
+		background-color: $bg-light-purple
+	}
+	&:not(.collapsed) {
+		color: $black;
+		background-color: $gold;
+		box-shadow: none;
+	}
+}
+
+.accordion-body {
+	padding-bottom: .5rem;
+	ul {
+		padding-left: 1rem;
 	}
 }
 

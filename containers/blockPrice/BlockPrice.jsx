@@ -3,7 +3,6 @@ import Image from 'next/image'
 import {Container, Row, Col } from 'react-bootstrap'
 import { Swiper, SwiperSlide } from "swiper/react"
 //import { Pagination } from 'swiper'
-
 import CardPrice from './CardPrice'
 
 import "swiper/css"
@@ -21,10 +20,12 @@ import {
 export default function BlockPrice({ 
 	phoneNumber, 
 	header, 
-	allPrice, 
+	priceUslug,
 	widthDevice,
 	setmodalShow 
 }) {
+
+	priceUslug.sort((a, b) => a.fields.sorting - b.fields.sorting)
 
 	// Определение телефона по сетке bootstrap 5
 	// Подменяем блок цен на слайдер
@@ -64,14 +65,14 @@ export default function BlockPrice({
 							//	"clickable": true
 							//}}
 						>
-							{allPrice.map( (p, i) => (
-								<SwiperSlide key={ i } className={ slide }>
+							{ priceUslug.map(p => (
+								<SwiperSlide key={ p.sys.id } className={ slide }>
 									<CardPrice
-										url={ p.url }
-										title={ p.title }
-										txt={ p.txt }
-										low={ p.low }
-										price={ p.price }
+										url={ p.fields.slug }
+										title={ p.fields.heading }
+										txt={ p.fields.description }
+										low={ p.fields.lowPrice }
+										price={ p.fields.price }
 										phoneNumber={ phoneNumber }
 										setmodalShow={ setmodalShow }
 									/>
@@ -81,14 +82,14 @@ export default function BlockPrice({
 					</Row>
 				:
 					<Row className="row row-cols-2 row-cols-lg-4 g-4">
-						{allPrice.map( (p, i) => (
-							<Col key={ i } className={ price }>
-								<CardPrice 
-									url={ p.url }
-									title={ p.title }
-									txt={ p.txt }
-									low={ p.low }
-									price={ p.price }
+						{priceUslug.map(p => (
+							<Col key={ p.sys.id } className={ price }>
+								<CardPrice
+									url={ p.fields.slug }
+									title={ p.fields.heading }
+									txt={ p.fields.description }
+									low={ p.fields.lowPrice }
+									price={ p.fields.price }
 									phoneNumber={ phoneNumber }
 									setmodalShow={ setmodalShow }
 								/>

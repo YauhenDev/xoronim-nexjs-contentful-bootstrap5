@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import NumberFormat from 'react-number-format'
 import { Button, Card } from 'react-bootstrap'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import {
 	cardPrice,
@@ -37,13 +38,15 @@ export default function CardPrice({
 			<Card.Text 
 				className={ text } 
 				itemProp="description"
+				as="div"
 			>
-
-				{ txt }
+				{ 
+					documentToReactComponents( txt )
+				}
 			</Card.Text>
 			<p className="pt-1 text-center">
 				<Link 
-					href={ url }
+					href={`/services/prices/${url}`}
 				>
 					<a 
 						title={`Узнать подробнее про услугу — ${ title }`}

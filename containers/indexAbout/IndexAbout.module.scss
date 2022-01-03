@@ -8,3 +8,11 @@
 	column-count: 2;
 	column-gap: 4%;
 }
+
+@media  (max-width: 991px) {
+	.txt {
+		column-width: 100%;
+		column-count: 1;
+		column-gap: 0;
+	}
+}
