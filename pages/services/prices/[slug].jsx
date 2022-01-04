@@ -47,7 +47,7 @@ export async function getStaticProps({ params }) {
 	return {
 		props: {
 			priceServices: items[0],
-			uslugiPrice: prices.items	//************ USLUGI */
+			uslugiPrice: prices.items	//************ USLUGI  */
 			
 		}
 	}

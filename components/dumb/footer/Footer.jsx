@@ -19,7 +19,7 @@ export default function Footer({
 	mainPages
 }) {
 
-	//debugger;
+	//debugger; 
 	return (
 	<Container fluid className={ block }>
 		<Container 

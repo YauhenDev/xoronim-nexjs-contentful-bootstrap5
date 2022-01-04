@@ -25,7 +25,7 @@ export async function getStaticProps( ) {
 	return {
 		props: {
 			uslugiPrice: prices.items,		// Цены на услуги
-			allServices: services.items		// Все услуги
+			allServices: services.items		// Все услуги 
 		}
 		//revalidate: 10 //Обновлять раз в 10 секунд
 	}
