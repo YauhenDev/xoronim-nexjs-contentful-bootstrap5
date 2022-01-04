@@ -1,12 +1,15 @@
 import Image from 'next/image'
 import {Container, Row, Col } from 'react-bootstrap'
+import parse from 'html-react-parser'
 
 import {
 	wrapper
 } from './BlockShowroom.module.scss'
 
 export default function BlockShowroom({ 
-	mainData
+	header,
+	txt,
+	namePhoto
 }) {
 
 	//debugger;
@@ -14,23 +17,30 @@ export default function BlockShowroom({
 	<Container fluid="xxl" className={ wrapper }>
 		<Row>
 			<Col xl={ 12 }>
-				<h2>Выставочный зал</h2>
+				<h2>
+					{ header }
+				</h2>
 				<p className="text-center pb-4">
-					Вы можете посмотреть наш зал с широким ассортиментом<br />
-					включая принадлежности собственного производства
+					{parse( txt )}
 				</p>
 			</Col>
 		</Row>
-		<Row>
-			<Col sm={ 12 } md={ 4 } lg={ 4 } xl={ 4 }>
-				photo
-			</Col>
-			<Col sm={ 12 } md={ 4 } lg={ 4 } xl={ 4 }>
-				photo
-			</Col>
-			<Col sm={ 12 } md={ 4 } lg={ 4 } xl={ 4 }>
-				photo
-			</Col>
+		<Row className="g-2">
+			{ namePhoto.map( (p, i) => (
+				<Col 
+					key={ i } 
+					xs={ 6 }   
+					md={ 3 } 
+				>
+					<Image 
+						src={`/assets/img/photo/${p.img}`}
+						layout="responsive"
+						loading="lazy"
+						width={ 450 }
+						height={ 500 }
+					/>
+				</Col> 
+			))}
 		</Row>
 	</Container>
 	)

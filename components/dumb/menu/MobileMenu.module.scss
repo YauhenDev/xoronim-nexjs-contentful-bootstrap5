@@ -69,6 +69,21 @@
 	}
 }
 
+.contacts {
+	padding: 0;
+	text-align: center;
+	hr {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.phone {
+	a {
+		color: $main;
+		font-size: 2rem;
+	}
+}
+
 @media  (max-width: 991px) {
 	.nav {
 		ul {

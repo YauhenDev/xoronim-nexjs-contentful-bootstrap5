@@ -6,5 +6,53 @@
 }
 
 .wrapper {
-	
+	padding-bottom: 4rem;
+}
+
+.card {
+	background-color: transparent;
+	border: 0;
+}
+
+.header {
+	background-color: transparent;
+	border: 0;
+	font-size: 1.2rem;
+}
+
+.text {
+	ul {	
+		padding-left: 0;
+		list-style: none;
+		li {
+			padding-bottom: .5rem;
+		}
+	}
+}
+
+.link {
+	color: $main;
+	padding-left: .5rem;
+	&:hover {
+		color: $black;
+		text-decoration: underline;
+	}
+}
+
+@media  (max-width: 991px) {
+	.wrapper {
+		h1 {
+			padding-bottom: 3rem;
+		}
+	}
+	.col {
+		margin-top: 0 !important;
+	}
+	.text {
+		svg {
+			[data-fill="primary"] {
+				fill: $primary;
+			}
+		}
+	}
 }

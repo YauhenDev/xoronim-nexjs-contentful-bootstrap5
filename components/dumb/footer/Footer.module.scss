@@ -7,5 +7,50 @@
 
 .wrapper {
 	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-bottom: 1rem;
+	h4 {
+		font-size: 1rem;
+	}
+	svg {
+		height: 45px;
+		[data-fill="primary"] {
+			fill: $main;
+		}
+		[data-fill="bglightpurple"] {
+			fill: $primarydark;
+		}
+	}
+	ul {
+		list-style: none;
+		padding-left: 0;
+	}
+	address {
+		span {
+			padding-left: .5rem;
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+	}
+	a {
+		color: $main;
+	}
+}
+
+.copyright {
+	text-align: left;
+}
+
+.licenses {
+	text-align: right;
+}
+
+@media  (max-width: 767px) {
+	.copyright {
+		text-align: center;
+	}
+	.licenses {
+		text-align: center;
+	}
+	
 }

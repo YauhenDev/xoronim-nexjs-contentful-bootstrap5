@@ -1,25 +1,33 @@
 import Image from 'next/image'
-import {Container, Row, Col } from 'react-bootstrap'
+import {Container, Row, Col, Button } from 'react-bootstrap'
 
 import {
 	wrapper,
 	row,
-	txt,
+	text,
 	angelblock,
 	angel,
 	contact
 } from './BlockQuestions.module.scss'
 
 export default function BlockQuestions({ 
-	mainData
+	header,
+	txt,
+	setmodalShow
 }) {
 
 	//debugger;
 	return (
 	<Container fluid="xxl" className={ wrapper }>
 		<Row className={ row }>
-			<Col xs={{span: 12, order: 3}} sm={{span: 6, order: 2}} md={{span: 5, order: 1 }} lg={ 4 } xl={ 4 } className={ angelblock }>
-				
+			<Col 
+				xs={{span: 12, order: 3}} 
+				sm={{span: 6, order: 2}} 
+				md={{span: 5, order: 1 }} 
+				lg={ 4 } 
+				xl={ 4 } 
+				className={ angelblock }
+			>
 				<div className={ angel }>
 					<Image 
 						src="/assets/img/angelstatue.png"
@@ -29,16 +37,39 @@ export default function BlockQuestions({
 						loading="lazy"
 					/>
 				</div>
-
 			</Col>
-			<Col xs={{span: 12, order: 2}} sm={{span: 6, order: 3}} md={{span: 7, order: 2 }} lg={ 4 } xl={ 4 } className={ txt }>
+			<Col 
+				xs={{span: 12, order: 2}} 
+				sm={{span: 6, order: 3}} 
+				md={{span: 7, order: 2 }} 
+				lg={ 4 } 
+				xl={ 4 } 
+				className={ text }
+			>
 
-				Если у вас произошла трагедия и вы не знаете как организовать похороны и куда обращаться позвоните нам или вызовите ритуального агента и мы всё сделаем за вас.
+				{ txt }
 			
 			</Col>
-			<Col xs={{span: 12, order: 1}} sm={{span: 12, order: 1}} md={{span: 12, order: 3 }} lg={ 4 } xl={ 4 } className={ contact }>
+			<Col 
+				xs={{span: 12, order: 1}} 
+				sm={{span: 12, order: 1}} 
+				md={{span: 12, order: 3 }} 
+				lg={ 4 } 
+				xl={ 4 } 
+				className={ contact }
+			>
 				
-				<h2>Остались вопросы?</h2>
+				<h2>
+					{ header }
+				</h2>
+
+				<Button 
+					//href={`tel:+${ mainData.phoneNumber_1 }`} 
+					variant="primary" 
+					onClick={() => setmodalShow(true)}
+				>
+					Заказать консультацию
+				</Button>
 
 			</Col>
 		</Row>

@@ -2,11 +2,12 @@ import {Container, Row, Col } from 'react-bootstrap'
 
 import {
 	wrapper,
-	txt
+	text
 } from './IndexAbout.module.scss'
 
 export default function IndexAbout({ 
-	mainData
+	header,
+	txt
 }) {
 
 	//debugger;
@@ -14,23 +15,18 @@ export default function IndexAbout({
 	<Container fluid="xxl" className={ wrapper }>
 		<Row>
 			<Col xl={ 12 }>
-				<h2>О нас</h2>
+				<h2>
+					{ header }
+				</h2>
 			</Col>
 		</Row>
 		<Row>
-			<Col xl={ 12 } className={ txt }>
-				<p>
-					Наша компания занимается ритуальными услугами более 15 лет, число наших клиентов достигает более 3000.
-				</p>
-				<p>
-					Вы можете быть уверены в качественной организации ритуальных услуг, мы берём на себя абсолютно всю ответственность.
-				</p>
-				<p>
-					В перечень наших услуг включены такие мероприятия, как: доставка тела в морг, предоставление места на кладбище, церемония прощания, поминальный обед и др.
-				</p>
-				<p>
-					Важно! Остерегайтесь мошенников, которые часто пользуются тяжелой ситуацией, перед выбором центра ритуальных услуг узнайте всю нужную информацию.
-				</p>
+			<Col className={ text }>
+				{ txt.map( (p, i) => (
+					<p key={ i } >
+						{ p.p}
+					</p>
+				))}
 			</Col>
 		</Row>
 	</Container>

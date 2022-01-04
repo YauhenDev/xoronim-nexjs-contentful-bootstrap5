@@ -38,7 +38,7 @@ export default function Header({
 			</Col>
 			<Col xs={ 5 } sm={ 6 } md={ 4 } lg={ 2 } xl={ 2 } className={`pt-1`}>
 			
-				Более <strong>15 лет</strong><br />
+				Более <strong>10 лет</strong><br />
 				профессионального<br />
 				обслуживания
 

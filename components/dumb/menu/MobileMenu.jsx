@@ -5,13 +5,16 @@ import LinkLogo from '@components/ui/logo/LinkLogo'
 import CloseSVG from '@components/ui/ico/CloseSVG'
 import PhoneBtn from '@components/dumb/phone/PhoneBtn'
 import LinksMenu from '@components/dumb/menu/LinksMenu'
+import Phone from '@components/dumb/phone/Phone'
 
 import { 
 	mobileToggler,
 	aside,
 	logo,
 	logomobile,
-	close
+	close,
+	phone,
+	contacts
 } from './MobileMenu.module.scss'
 
 export default function MobileMenu({
@@ -91,6 +94,30 @@ export default function MobileMenu({
 
 				</Col>
 			</Row>
+
+			<Row>
+				<Col className={ contacts }>
+
+					<hr />
+
+					Круглосуточная горячая линия:
+					<p className={ phone }>
+						<Phone 
+							phone={ mainData.phoneNumber_1 }
+						/>
+					</p>
+					<p>
+						{ mainData.legalAdrCity }<br /> 
+						{ mainData.legalAdrStr }
+					</p>
+					<p>
+						{ mainData.legalAdrMetro }
+					</p>
+					
+
+				</Col>
+			</Row>
+
 
 		</Offcanvas>
 	

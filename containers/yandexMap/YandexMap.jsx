@@ -4,7 +4,7 @@ import { YMaps, Map, Placemark, ZoomControl } from "react-yandex-maps"
 
 const mapState = {
 	center: [55.787037, 37.719064],
-	zoom: 12
+	zoom: 15
 };
 
 import { 

@@ -22,14 +22,19 @@ export async function getStaticProps( ) {
 		content_type: 'umer-chelovek-chto-delat'
 	})
 
-	const prices = await client.getEntries({ 
+	const priceServices = await client.getEntries({ 
 		content_type: 'priceServices'
+	})
+
+	const services = await client.getEntries({ 
+		content_type: 'services'
 	})
 
 	return {
 		props: {
-			chtoDelat: details.items,
-			priceUslug: prices.items
+			chtoDelat: details.items,			// Что делать - ДЕТАЛИ
+			priceUslug: priceServices.items,	// Цены на услуги
+			allServices: services.items			// Все услуги
 		}
 		//revalidate: 10 //Обновлять раз в 10 секунд
 	}
@@ -40,7 +45,8 @@ export default function Home({
 	widthDevice,
 	setmodalShow,
 	priceUslug,
-	chtoDelat
+	chtoDelat,
+	allServices
  }) {
 
 	const i = 0
@@ -64,10 +70,10 @@ export default function Home({
 
 		<IndexTrouble 
 			indexTrouble={ state.indexTrouble }
+			widthDevice={ widthDevice }
 		/>
 
 		<BlockPrice 
-			phoneNumber={ state.mainData.phoneNumber_1 }
 			header={ state.indexPrice.h2 }
 			priceUslug={ priceUslug }
 			widthDevice={ widthDevice }
@@ -81,20 +87,26 @@ export default function Home({
 			chtoDelat={ chtoDelat }
 		/>
 
-		<BlockServices 
-		
+		<BlockServices
+			header={ state.indexServices.h2 }
+			allServices={ allServices }
 		/>
 
 		<BlockQuestions 
-		
+			header={ state.indexQuestions.h2 }
+			txt={ state.indexQuestions.p }
+			setmodalShow={ setmodalShow }
 		/>
 
 		<BlockShowroom 
-		
+			header={ state.indexShowroom.h2 }
+			txt={ state.indexShowroom.p }
+			namePhoto={ state.indexShowroom.indexShowroomPhoto }
 		/>
 
 		<IndexAbout 
-		
+			header={ state.indexAbout.h2 }
+			txt={ state.indexAbout.indexAboutTxt }
 		/>
 
 	</>

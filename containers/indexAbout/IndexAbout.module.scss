@@ -1,16 +1,17 @@
 @import "@styles/vars";
 
 .wrapper {
+	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
-.txt {
+.text {
 	column-width: 48%;
 	column-count: 2;
 	column-gap: 4%;
 }
 
 @media  (max-width: 991px) {
-	.txt {
+	.text {
 		column-width: 100%;
 		column-count: 1;
 		column-gap: 0;

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {Container, Row, Col } from 'react-bootstrap'
 
 import IndexTroubleCard from './IndexTroubleCard'
@@ -8,8 +9,15 @@ import {
 } from './IndexTrouble.module.scss'
 
 export default function IndexTrouble({ 
-	indexTrouble
+	indexTrouble,
+	widthDevice
 }) {
+
+	// Определение телефона по сетке bootstrap 5
+	// Подменяем блок цен на слайдер
+	const [isMobile, setIsMobile] = useState(widthDevice);
+	const ismobile = widthDevice < 992;
+	if (ismobile !== isMobile) setIsMobile(ismobile);
 
 	//debugger;
 	return (
@@ -22,7 +30,7 @@ export default function IndexTrouble({
 					</h2>
 				</Col>
 			</Row>
-			<Row className="row row-cols-2 row-cols-lg-4 g-4">
+			<Row className={`row row-cols-2 row-cols-lg-4 ${isMobile ? "g-2" : "g-4" }`}>
 				{ indexTrouble.indexTroubleBlock.map( (p, i) => (
 					<IndexTroubleCard 
 						key={ i }

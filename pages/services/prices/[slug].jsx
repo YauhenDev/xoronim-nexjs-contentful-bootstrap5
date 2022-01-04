@@ -5,7 +5,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import {Container, Row, Col } from 'react-bootstrap'
 
 //import Breadcrumbs from '@components/smart/breadcrum/Breadcrumbs'
-//import CardProduct from '@components/product/CardProduct'
 import BlockPrice from '@containers/blockPrice/BlockPrice'
 
 import { createClient } from "contentful"
@@ -48,9 +47,8 @@ export async function getStaticProps({ params }) {
 	return {
 		props: {
 			priceServices: items[0],
-			//************ USLUGI */
-			uslugiPrice: prices.items
-			//************ USLUGI */
+			uslugiPrice: prices.items	//************ USLUGI */
+			
 		}
 	}
 
@@ -71,10 +69,10 @@ export default function RecipeDetails({
 	return (
 		<>
 			<Head>
-				<title></title>
-				<meta name="description" 		content="" />
-				<meta property="og:title"		content="" />
-				<meta property="og:description"	content="" />
+				<title>Цена на { heading } — от { price } руб.</title>
+				<meta name="description" 		content={`Честная цена на ${ heading } от ${ price } руб. Узнать подробнее можно  на нашем официальном сайте ритуальной службы XORONIM.moscow`} />
+				<meta property="og:title"		content={`Цена на ${ heading } — от ${ price } ₽`} />
+				<meta property="og:description"	content={`Честная цена на ${ heading } от ${ price } руб. Узнать подробнее можно  на нашем официальном сайте ритуальной службы XORONIM.moscow`} />
 			</Head>
 
 
