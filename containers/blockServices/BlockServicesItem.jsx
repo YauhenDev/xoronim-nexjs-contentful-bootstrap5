@@ -30,7 +30,6 @@ export default function BlockServicesItem({
 			<Card.Body>
 				<Card.Text 
 					className={ text } 
-					itemProp="description"
 					as="div"
 				>
 					<ul>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import TagManager from 'react-gtm-module'
+//import TagManager from 'react-gtm-module'
 
 import Layout from '@components/layouts/Layouts'
 import ContactsModal from '@components/dumb/modal/ContactsModal'
@@ -8,16 +8,16 @@ import '@styles/app.scss'
 
 import state from 'data/stateJSON.json'
 
-const tagManagerArgs = {
-	gtmId: 'GTM-KHMK3T7'
-}
+// const tagManagerArgs = {
+// 	gtmId: 'GTM-KHMK3T7'
+// }
 
 function Application({ Component, pageProps }) {
 
-	useEffect(() => {
+	//useEffect(() => {
 		//Вызываем GTM
-		TagManager.initialize(tagManagerArgs);
-	},[])
+		//TagManager.initialize(tagManagerArgs);
+	//},[])
 
 	//Постоянно смотрим за разрешением 
 	const useDeviceSize = () => {

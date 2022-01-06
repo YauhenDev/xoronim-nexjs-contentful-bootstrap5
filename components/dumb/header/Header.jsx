@@ -21,8 +21,6 @@ export default function Header({
 	<Container fluid="xxl" className={ wrapper }>
 		<header 
 			className="row" 
-			itemScope 
-			itemType="https://schema.org/WPHeader"
 		>
 			<Col lg={ 2 } xl={ 2 } className={`d-none d-lg-block ${ logo }`}>
 
