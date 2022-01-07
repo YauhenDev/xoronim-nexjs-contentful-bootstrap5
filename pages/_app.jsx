@@ -9,8 +9,8 @@ import '@styles/app.scss'
 import state from 'data/stateJSON.json'
 
 const tagManagerArgs = {
-    gtmId: process.env.NEXT_PUBLIC_GTM_ID ,
-    dataLayerName: 'PageDataLayer'
+    gtmId: process.env.NEXT_PUBLIC_GTM_ID
+    //dataLayerName: 'PageDataLayer'
 }
 
 function Application({ Component, pageProps }) {
@@ -21,7 +21,7 @@ function Application({ Component, pageProps }) {
 		//Вызываем GTM
 		setTimeout(() => {
 			TagManager.initialize(tagManagerArgs);
-		}, 2500);
+		}, 3000);
 	},[])
 
 	//Постоянно смотрим за разрешением 
