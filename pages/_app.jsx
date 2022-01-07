@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import TagManager from 'react-gtm-module'
+//import TagManager from 'react-gtm-module'
 //import Script from 'next/script'
 
 import Layout from '@components/layouts/Layouts'
@@ -16,9 +16,9 @@ function Application({ Component, pageProps }) {
 
 	useEffect(() => {
 		//Вызываем GTM
-		setTimeout(() => {
-			TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_ID });
-		  }, 4000);
+		// setTimeout(() => {
+		// 	TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_ID });
+		//   }, 4000);
 
 		//const timeOut = setTimeout(() => setShowGtm(true), 2500);
     	//return () => clearTimeout(timeOut);

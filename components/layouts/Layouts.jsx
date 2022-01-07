@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import dynamic from 'next/dynamic'
+//import dynamic from 'next/dynamic'
+import TagManager from 'react-gtm-module'
 
 import Head from 'next/head'
 import NextNprogress from 'nextjs-progressbar'
@@ -27,7 +28,13 @@ export default function Layout({
 
 	const [showYandexMap, setShowYandexMap] = useState(false);
 	useEffect(() => {
-		const timeOut = setTimeout(() => setShowYandexMap(true), 4000);
+		//Вызываем GTM
+		setTimeout(() => {
+			TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_ID });
+		}, 2500);
+
+		// Загружаем карту через 4 секунды
+		const timeOut = setTimeout(() => setShowYandexMap(true), 3000);
     	return () => clearTimeout(timeOut);
 	},[])
 
