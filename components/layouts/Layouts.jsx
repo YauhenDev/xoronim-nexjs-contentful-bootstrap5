@@ -1,12 +1,18 @@
 import { useRouter } from 'next/router'
+import dynamic from 'next/dynamic'
 
 import Head from 'next/head'
 import NextNprogress from 'nextjs-progressbar'
 
 import Header from '@components/dumb/header/Header'
 import Navbar from '@components/dumb/navbar/Navbar'
-import YandexMap from '@containers/yandexMap/YandexMap'
+//import YandexMap from '@containers/yandexMap/YandexMap'
 import Footer from '@components/dumb/footer/Footer'
+
+const YandexMap = dynamic(() => import('@containers/yandexMap/YandexMap'), {
+    ssr: false, // do not render this on the server side render
+    loading: () => <div>Загрузка карты...</div>
+});
 
 
 export default function Layout({ 
@@ -71,7 +77,7 @@ export default function Layout({
 				</>
 		*/ }
 
-	{/* 	<YandexMap /> */}
+		<YandexMap />
 
 		<Footer 
 			mainData={ state.mainData }
