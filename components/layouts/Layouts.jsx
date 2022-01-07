@@ -77,6 +77,7 @@ export default function Layout({
 				</>
 		*/ }
 
+		{/* https://question-it.com/questions/2910241/kak-otlozhit-zagruzku-komponenta-karty-s-pomoschju-huka-useeffect-dlja-sajta-react-next-js */}
 		<YandexMap />
 
 		<Footer 
