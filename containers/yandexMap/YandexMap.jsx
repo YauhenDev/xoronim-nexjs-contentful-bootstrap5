@@ -7,14 +7,12 @@ const mapState = {
 	zoom: 15
 };
 
-import { 
-	block	
-} from './YandexMap.module.scss'
+import styles from './YandexMap.module.scss'
 
 const YandexMap = () => {
 
 	return (
-	<Container fluid className={`${block} p-0`}>
+	<Container fluid className={`${ styles.block } p-0`}>
 		<Row className="g-0">
 			<Col xs={12}>
 

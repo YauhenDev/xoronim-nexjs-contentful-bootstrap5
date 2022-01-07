@@ -2,11 +2,7 @@ import { Button } from 'react-bootstrap'
 
 import PhoneSVG from '@components/ui/ico/PhoneSVG'
 
-import {
-	link,
-	pulse,
-	phone
-} from './Phone.module.scss'
+import styles from './Phone.module.scss'
 
 
 export default function PhoneBtn({ 
@@ -22,10 +18,10 @@ export default function PhoneBtn({
 				  window.location.href = `tel:+${ mainData.phoneNumber_1 }`;
 			}}
 			variant="light"
-			className={`${ link } p-0`}
+			className={`${ styles.link } p-0`}
 		>
-			<span className={ pulse }>
-				<span className={ phone }>
+			<span className={ styles.pulse }>
+				<span className={ styles.phone }>
 					<PhoneSVG />
 				</span>
 			</span>

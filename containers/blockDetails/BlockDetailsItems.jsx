@@ -3,10 +3,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import Phone from '@components/dumb/phone/Phone'
 
-import {
-	
-} from './BlockDetails.module.scss'
-
 export default function BlockDetailsItems({ 
 	phone,
 	chtoDelat

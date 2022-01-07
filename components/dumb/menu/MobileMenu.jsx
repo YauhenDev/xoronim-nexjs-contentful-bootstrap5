@@ -7,15 +7,7 @@ import PhoneBtn from '@components/dumb/phone/PhoneBtn'
 import LinksMenu from '@components/dumb/menu/LinksMenu'
 import Phone from '@components/dumb/phone/Phone'
 
-import { 
-	mobileToggler,
-	aside,
-	logo,
-	logomobile,
-	close,
-	phone,
-	contacts
-} from './MobileMenu.module.scss'
+import styles from './MobileMenu.module.scss'
 
 export default function MobileMenu({
 	mainData, 
@@ -39,17 +31,17 @@ export default function MobileMenu({
 	<>
 	
 		<Row>
-			<Col xs={ 4 } sm={ 4 } md={ 4 } className={ logomobile }>
+			<Col xs={ 4 } sm={ 4 } md={ 4 } className={ styles.logomobile }>
 				<LinkLogo />
 			</Col>
 			<Col xs={ 5 } sm={ 6 } md={ 6 }  className="text-end">
-				<PhoneBtn mainData={ mainData } />
+				<PhoneBtn mainData={ styles.mainData } />
 			</Col>
 			<Col xs={ 3 } sm={ 2 } md={ 2 } className="text-end">
 				<Button 
 					variant="light" 
 					onClick={ handleShow }
-					className={`btn p-0 ${ mobileToggler }`}
+					className={`btn p-0 ${ styles.mobileToggler }`}
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -61,11 +53,11 @@ export default function MobileMenu({
 		<Offcanvas 
 			show={show} 
 			onHide={handleClose} 
-			className={ aside } 
+			className={ styles.aside } 
 			onClick={() => handleClose()}
 		>
 			<Row className={`g-0`}>
-				<Col className={ logo }>
+				<Col className={ styles.logo }>
 
 					<LinkLogo />
 
@@ -73,7 +65,7 @@ export default function MobileMenu({
 				<Col>
 
 					<Button
-						className={`${ close }`}
+						className={`${ styles.close }`}
 						data-bs-dismiss="offcanvas" 
 						aria-label="Close"
 						variant="link"
@@ -96,12 +88,12 @@ export default function MobileMenu({
 			</Row>
 
 			<Row>
-				<Col className={ contacts }>
+				<Col className={ styles.contacts }>
 
 					<hr />
 
 					Круглосуточная горячая линия:
-					<p className={ phone }>
+					<p className={ styles.phone }>
 						<Phone 
 							phone={ mainData.phoneNumber_1 }
 						/>

@@ -3,12 +3,7 @@ import NumberFormat from 'react-number-format'
 import { Button, Card } from 'react-bootstrap'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
-import {
-	cardPrice,
-	header,
-	text,
-	footer
-} from './BlockPrice.module.scss'
+import styles from './BlockPrice.module.scss'
 
 export default function CardPrice({ 
 	url,
@@ -21,13 +16,13 @@ export default function CardPrice({
 
 	return (
 	<Card 
-		className={ cardPrice }
+		className={ styles.cardPrice }
 		itemScope 
 		itemType="http://schema.org/Product"
 	>
 		<Card.Header 
 			as="h3"
-			className={ header } 
+			className={ styles.header } 
 			itemProp="name"
 		>
 
@@ -36,7 +31,7 @@ export default function CardPrice({
 		</Card.Header>
 		<Card.Body>
 			<Card.Text 
-				className={ text } 
+				className={ styles.text } 
 				itemProp="description"
 				as="div"
 			>
@@ -57,7 +52,7 @@ export default function CardPrice({
 			</p>
 		</Card.Body>
 		<Card.Footer 
-			className={ footer } 
+			className={ styles.footer } 
 			itemProp="offers" 
 			itemScope 
 			itemType="http://schema.org/AggregateOffer"

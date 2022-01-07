@@ -2,13 +2,7 @@ import Link from 'next/link'
 import { Col, Card } from 'react-bootstrap'
 
 import ListTypeSVG from '@components/ui/ico/ListTypeSVG'
-import {
-	col,
-	card,
-	header,
-	text,
-	link
-} from './BlockServices.module.scss'
+import styles from './BlockServices.module.scss'
 
 export default function BlockServicesItem({ 
 	cat,
@@ -17,19 +11,19 @@ export default function BlockServicesItem({
 
 	//debugger;
 	return (
-	<Col className={ col }>
+	<Col className={ styles.col }>
 		<Card 
-			className={`${ card } h-100`}
+			className={`${ styles.card } h-100`}
 		>
 			<Card.Header 
 				as="h3"
-				className={ header } 
+				className={ styles.header } 
 			>
 				{ cat }
 			</Card.Header>
 			<Card.Body>
 				<Card.Text 
-					className={ text } 
+					className={ styles.text } 
 					as="div"
 				>
 					<ul>
@@ -41,7 +35,7 @@ export default function BlockServicesItem({
 								>
 									<a 
 										title={`Ритуальная услуга: ${ p.fields.serviceName }`}
-										className={`${ link } bs-0`}
+										className={`${ styles.link } bs-0`}
 									>
 										{ p.fields.serviceName }
 									</a>

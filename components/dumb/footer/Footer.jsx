@@ -4,13 +4,7 @@ import {Container, Row, Col } from 'react-bootstrap'
 import LinkLogo from '@components/ui/logo/LinkLogo'
 import Phone from '@components/dumb/phone/Phone'
 
-import {
-	block,
-	wrapper,
-	phone,
-	copyright,
-	licenses
-} from './Footer.module.scss'
+import styles from './Footer.module.scss'
 
 const thisYear = new Date();
 
@@ -21,10 +15,10 @@ export default function Footer({
 
 	//debugger; 
 	return (
-	<Container fluid className={ block }>
+	<Container fluid className={ styles.block }>
 		<Container 
 			fluid="xxl" 
-			className={ wrapper }
+			className={ styles.wrapper }
 			itemScope 
 			itemType="https://schema.org/WPFooter"
 		>
@@ -112,7 +106,7 @@ export default function Footer({
 					Круглосуточная горячая линия
 					<address>
 						<ul itemScope itemType="http://schema.org/PostalAddress">
-							<li itemProp="telephone" className={ phone }>
+							<li itemProp="telephone" className={ styles.phone }>
 								<Phone 
 									phone={ mainData.phoneNumber_1 }
 								/>
@@ -132,14 +126,14 @@ export default function Footer({
 			</Row>
 			<hr />
 			<Row>
-				<Col xs={ 12 } sm={ 6 } className={ copyright }>
+				<Col xs={ 12 } sm={ 6 } className={ styles.copyright }>
 					<small>
 						© 2011 — <span itemProp="copyrightYear">
 							{ thisYear.getFullYear() }
 						</span> ООО "РСС", Все права защищены 
 					</small>
 				</Col>
-				<Col xs={ 12 } sm={ 6 } className={ licenses }>
+				<Col xs={ 12 } sm={ 6 } className={ styles.licenses }>
 					<small>
 						<Link 
 							href="/"

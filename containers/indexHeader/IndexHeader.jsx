@@ -8,12 +8,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import IndexHeaderContent from './IndexHeaderContent'
 
 
-import {
-	parallax,
-	angel,
-	parallaxBg1,
-	parallaxBg2
-} from './IndexHeader.module.scss'
+import styles from './IndexHeader.module.scss'
 
 
 export default function IndexHeader({ 
@@ -50,7 +45,7 @@ export default function IndexHeader({
 	//debugger;
 	return (
 	<Container fluid className="p-0">
-		<Row className={`g-0 ${parallax}`}>
+		<Row className={`g-0 ${ styles.parallax}`}>
 			<Col>
 				{ isMobile ? 
 					<IndexHeaderContent 
@@ -69,7 +64,7 @@ export default function IndexHeader({
 								],
 							}}
 						>
-						<div className={ parallaxBg1 } id="hg1">
+						<div className={ styles.parallaxBg1 } id="hg1">
 							<Image 
 								src="/assets/img/index_bg/bg_index_header_snd_next.png"
 								layout="fill"
@@ -77,7 +72,7 @@ export default function IndexHeader({
 								objectFit={ isTablet ? "contain" : "" }
 							/>
 						</div>
-						<div className={ parallaxBg2 } id="hg2">
+						<div className={ styles.parallaxBg2 } id="hg2">
 							<Image 
 								src="/assets/img/index_bg/bg_index_header_fst_next.png"
 								layout="fill"
@@ -85,7 +80,7 @@ export default function IndexHeader({
 							/>
 						</div>
 
-						<div className={ angel }>
+						<div className={ styles.angel }>
 							<Image 
 								src="/assets/img/index_bg/angel.png"
 								layout="fixed"

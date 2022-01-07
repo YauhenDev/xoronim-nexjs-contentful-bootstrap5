@@ -2,9 +2,7 @@ import {Container, Row, Col } from 'react-bootstrap'
 
 import BlockDetailsItems from './BlockDetailsItems'
 
-import {
-	wrapper
-} from './BlockDetails.module.scss'
+import styles from './BlockDetails.module.scss'
 
 export default function BlockDetails({ 
 	phone,
@@ -15,7 +13,7 @@ export default function BlockDetails({
 
 	//debugger;
 	return (
-	<Container fluid="xxl" className={ wrapper }>
+	<Container fluid="xxl" className={ styles.wrapper }>
 		<Row>
 			<Col xl={ 12 }>
 

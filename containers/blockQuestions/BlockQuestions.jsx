@@ -1,14 +1,7 @@
 import Image from 'next/image'
 import {Container, Row, Col, Button } from 'react-bootstrap'
 
-import {
-	wrapper,
-	row,
-	text,
-	angelblock,
-	angel,
-	contact
-} from './BlockQuestions.module.scss'
+import styles from './BlockQuestions.module.scss'
 
 export default function BlockQuestions({ 
 	header,
@@ -18,17 +11,17 @@ export default function BlockQuestions({
 
 	//debugger;
 	return (
-	<Container fluid="xxl" className={ wrapper }>
-		<Row className={ row }>
+	<Container fluid="xxl" className={ styles.wrapper }>
+		<Row className={ styles.row }>
 			<Col 
 				xs={{span: 12, order: 3}} 
 				sm={{span: 6, order: 2}} 
 				md={{span: 5, order: 1 }} 
 				lg={ 4 } 
 				xl={ 4 } 
-				className={ angelblock }
+				className={ styles.angelblock }
 			>
-				<div className={ angel }>
+				<div className={ styles.angel }>
 					<Image 
 						src="/assets/img/angelstatue.png"
 						layout="fixed"
@@ -44,7 +37,7 @@ export default function BlockQuestions({
 				md={{span: 7, order: 2 }} 
 				lg={ 4 } 
 				xl={ 4 } 
-				className={ text }
+				className={ styles.text }
 			>
 
 				{ txt }
@@ -56,7 +49,7 @@ export default function BlockQuestions({
 				md={{span: 12, order: 3 }} 
 				lg={ 4 } 
 				xl={ 4 } 
-				className={ contact }
+				className={ styles.contact }
 			>
 				
 				<h2>

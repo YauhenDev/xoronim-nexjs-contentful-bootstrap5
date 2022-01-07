@@ -1,12 +1,7 @@
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import parse from 'html-react-parser'
 
-import {
-	content,
-	benefits,
-	xl,
-	agent
-} from './IndexHeader.module.scss'
+import styles from './IndexHeader.module.scss'
 
 export default function IndexHeaderContent({ 
 	setmodalShow,
@@ -17,16 +12,16 @@ export default function IndexHeaderContent({
 
 	//debugger;
 	return (
-	<Container fluid="xxl" className={ content }>
+	<Container fluid="xxl" className={ styles.content }>
 		<Row>
 			<Col sm={ 12 } md={ 12 } lg={ 7 } >
 				<h1>
 					{parse(h1)}
 				</h1>
-				<p className={ xl }>
+				<p className={ styles.xl }>
 					{parse(p)}
 				</p>
-				<Row className={ benefits }>
+				<Row className={ styles.benefits }>
 					{ indexHeader.indexHeaderBlock.map( (p, i) => (
 						<Col key={ i }>
 							{parse(p.block)}
@@ -34,7 +29,7 @@ export default function IndexHeaderContent({
 					))}
 				</Row>
 				<Row>
-					<Col className={ agent }>
+					<Col className={ styles.agent }>
 						<Button 
 							//href={`tel:+${ mainData.phoneNumber_1 }`} 
 							variant="primary" 

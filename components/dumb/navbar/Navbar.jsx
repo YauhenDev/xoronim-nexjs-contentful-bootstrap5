@@ -7,11 +7,7 @@ import MobileMenu from '@components/dumb/menu/MobileMenu'
 import PhoneSVG from '@components/ui/ico/PhoneSVG'
 import Phone from '@components/dumb/phone/Phone'
 
-import {
-	wrapper,
-	logomobile,
-	phone
-} from './Navbar.module.scss'
+import styles from './Navbar.module.scss'
 
 
 export default function Navbar({ 
@@ -37,7 +33,7 @@ export default function Navbar({
 	//debugger;
 	return (
 	<Container fluid 
-		className={`${wrapper}`} 
+		className={`${styles.wrapper}`} 
 		data-menufix={scroll ? "true" : "false"}
 	>
 		<Container fluid="xxl">
@@ -56,7 +52,7 @@ export default function Navbar({
 						// Отображать логотип при СКРОЛЕ
 						scroll 
 						? 
-						<Col lg={ 2 } className={ logomobile }>
+						<Col lg={ 2 } className={ styles.logomobile }>
 							<LinkLogo /> 
 						</Col>
 						: 
@@ -75,7 +71,7 @@ export default function Navbar({
 						// Отображать телефон при СКРОЛЕ
 						scroll 
 						? 
-							<Col lg={ 2 } className={`text-end ${ phone }`} >
+							<Col lg={ 2 } className={`text-end ${ styles.phone }`} >
 								<PhoneSVG />
 								<Phone 
 									phone={ mainData.phoneNumber_1 }

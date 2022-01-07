@@ -4,12 +4,7 @@ import LinkLogo from '@components/ui/logo/LinkLogo'
 import PhoneSVG from '@components/ui/ico/PhoneSVG'
 import Phone from '@components/dumb/phone/Phone'
 
-import {
-	wrapper,
-	logo,
-	company,
-	phone
-} from './Header.module.scss'
+import styles from './Header.module.scss'
 
 export default function Header({ 
 	mainData,
@@ -18,16 +13,16 @@ export default function Header({
 
 	//debugger;
 	return (
-	<Container fluid="xxl" className={ wrapper }>
+	<Container fluid="xxl" className={ styles.wrapper }>
 		<header 
 			className="row" 
 		>
-			<Col lg={ 2 } xl={ 2 } className={`d-none d-lg-block ${ logo }`}>
+			<Col lg={ 2 } xl={ 2 } className={`d-none d-lg-block ${ styles.logo }`}>
 
 				<LinkLogo />
 
 			</Col>
-			<Col xs={ 7 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 3 } className={`pt-1 ${ company}`} >
+			<Col xs={ 7 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 3 } className={`pt-1 ${ styles.company}`} >
 			
 				Официальный сайт<br />
 				Городская ритуальной служба<br />
@@ -52,7 +47,7 @@ export default function Header({
 				</Button>
 
 			</Col>
-			<Col lg={ 3 } xl={ 3 }  className={`d-none d-lg-block text-center ${ phone }`}>
+			<Col lg={ 3 } xl={ 3 }  className={`d-none d-lg-block text-center ${ styles.phone }`}>
 
 				<small>Круглосуточная горячая линия:</small>
 				<PhoneSVG />

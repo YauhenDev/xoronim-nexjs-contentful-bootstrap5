@@ -71,7 +71,7 @@ export default function Layout({
 				</>
 		*/ }
 
-		<YandexMap />
+	{/* 	<YandexMap /> */}
 
 		<Footer 
 			mainData={ state.mainData }

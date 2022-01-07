@@ -1,8 +1,6 @@
 import Modal from 'react-bootstrap/Modal'
 
-import {
-
-} from './ContactsModal.module.scss'
+import styles from './ContactsModal.module.scss'
 
 export default function ContactsModal({ 
 	modalShow,

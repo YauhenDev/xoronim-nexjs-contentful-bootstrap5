@@ -4,9 +4,7 @@ import { useRouter } from 'next/router'
 
 // https://stackoverflow.com/questions/53262263/target-active-link-when-the-route-is-active-in-next-js
 
-import { 
-	active
-} from './ActiveLink.module.scss'
+import styles from './ActiveLink.module.scss'
 
 const ActiveLink = ({ fuzzy = false, href, children }) => {
 	const router = useRouter()
@@ -25,7 +23,7 @@ const ActiveLink = ({ fuzzy = false, href, children }) => {
 	}
 
 	if ((!fuzzy && router.asPath === href) || (fuzzy && matched)) {
-		className = `${ className } ${ active }`;
+		className = `${ className } ${ styles.active }`;
 		//dataactive = 'true'
 	}
 

@@ -3,19 +3,12 @@ import Image from 'next/image'
 import {Container, Row, Col } from 'react-bootstrap'
 import { Swiper, SwiperSlide } from "swiper/react"
 //import { Pagination } from 'swiper'
+
 import CardPrice from './CardPrice'
+import styles from './BlockPrice.module.scss'
 
 import "swiper/css"
 //import "swiper/css/pagination"
-
-import {
-	price,
-	block,
-	cloud,
-	wrapper,
-	angel,
-	slide
-} from './BlockPrice.module.scss'
 
 export default function BlockPrice({ 
 	phoneNumber, 
@@ -35,9 +28,9 @@ export default function BlockPrice({
 
 	//debugger;
 	return (
-	<Container fluid className={ block }>
-		<Container fluid className={`${ cloud } p-0 `}>
-			<Container fluid className={`${ angel } p-0`}>
+	<Container fluid className={ styles.block }>
+		<Container fluid className={`${ styles.cloud } p-0 `}>
+			<Container fluid className={`${ styles.angel } p-0`}>
 				<Image 
 					src="/assets/img/price/statue.png"
 					layout="fixed"
@@ -46,7 +39,7 @@ export default function BlockPrice({
 					height={ 730 }
 				/>
 			</Container>
-			<Container fluid="xxl" className={ wrapper }>
+			<Container fluid="xxl" className={ styles.wrapper }>
 				<Row>
 					<Col xl={ 12 }>
 						<h2>{ header }</h2>
@@ -66,7 +59,7 @@ export default function BlockPrice({
 							//}}
 						>
 							{ priceUslug.map(p => (
-								<SwiperSlide key={ p.sys.id } className={ slide }>
+								<SwiperSlide key={ p.sys.id } className={ styles.slide }>
 									<CardPrice
 										url={ p.fields.slug }
 										title={ p.fields.heading }
@@ -83,7 +76,7 @@ export default function BlockPrice({
 				:
 					<Row className="row row-cols-2 row-cols-lg-4 g-4">
 						{priceUslug.map(p => (
-							<Col key={ p.sys.id } className={ price }>
+							<Col key={ p.sys.id } className={ styles.price }>
 								<CardPrice
 									url={ p.fields.slug }
 									title={ p.fields.heading }

@@ -3,10 +3,7 @@ import {Container, Row, Col } from 'react-bootstrap'
 
 import IndexTroubleCard from './IndexTroubleCard'
 
-import {
-	block,
-	wrapper
-} from './IndexTrouble.module.scss'
+import styles from './IndexTrouble.module.scss'
 
 export default function IndexTrouble({ 
 	indexTrouble,
@@ -21,8 +18,8 @@ export default function IndexTrouble({
 
 	//debugger;
 	return (
-	<Container fluid className={ block }>
-		<Container fluid="xxl" className={ wrapper }>
+	<Container fluid className={ styles.block }>
+		<Container fluid="xxl" className={ styles.wrapper }>
 			<Row>
 				<Col xl={ 12 }>
 					<h2>

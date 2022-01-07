@@ -2,9 +2,7 @@ import Image from 'next/image'
 import {Container, Row, Col } from 'react-bootstrap'
 import parse from 'html-react-parser'
 
-import {
-	wrapper
-} from './BlockShowroom.module.scss'
+import styles from './BlockShowroom.module.scss'
 
 export default function BlockShowroom({ 
 	header,
@@ -14,7 +12,7 @@ export default function BlockShowroom({
 
 	//debugger;
 	return (
-	<Container fluid="xxl" className={ wrapper }>
+	<Container fluid="xxl" className={ styles.wrapper }>
 		<Row>
 			<Col xl={ 12 }>
 				<h2>

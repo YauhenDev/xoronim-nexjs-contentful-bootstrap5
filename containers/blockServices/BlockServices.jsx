@@ -2,10 +2,7 @@ import {Container, Row, Col } from 'react-bootstrap'
 
 import BlockServicesItems from './BlockServicesItems'
 
-import {
-	block,
-	wrapper
-} from './BlockServices.module.scss'
+import styles from './BlockServices.module.scss'
 
 export default function BlockServices({ 
 	header,
@@ -14,8 +11,8 @@ export default function BlockServices({
 
 	//debugger;
 	return (
-	<Container fluid className={ block }>
-		<Container fluid="xxl" className={ wrapper }>
+	<Container fluid className={ styles.block }>
+		<Container fluid="xxl" className={ styles.wrapper }>
 			<Row>
 				<Col xl={ 12 }>
 					<h2>{ header }</h2>

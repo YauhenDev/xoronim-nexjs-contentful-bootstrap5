@@ -1,9 +1,6 @@
 import {Container, Row, Col } from 'react-bootstrap'
 
-import {
-	wrapper,
-	text
-} from './IndexAbout.module.scss'
+import styles from './IndexAbout.module.scss'
 
 export default function IndexAbout({ 
 	header,
@@ -12,7 +9,7 @@ export default function IndexAbout({
 
 	//debugger;
 	return (
-	<Container fluid="xxl" className={ wrapper }>
+	<Container fluid="xxl" className={ styles.wrapper }>
 		<Row>
 			<Col xl={ 12 }>
 				<h2>
@@ -21,7 +18,7 @@ export default function IndexAbout({
 			</Col>
 		</Row>
 		<Row>
-			<Col className={ text }>
+			<Col className={ styles.text }>
 				{ txt.map( (p, i) => (
 					<p key={ i } >
 						{ p.p}

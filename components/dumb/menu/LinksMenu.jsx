@@ -1,10 +1,6 @@
 import ActiveLink  from '@components/ui/links/ActiveLink'
 
-import {
-	nav,
-	item,
-	sidebarLink
-} from './MobileMenu.module.scss'
+import styles from './MobileMenu.module.scss'
 
 export default function LinksMenu({ 
 	mainPages
@@ -12,14 +8,14 @@ export default function LinksMenu({
 
 	return (
 	<ul 
-		className={`${ nav } navbar-nav`} 
+		className={`${ styles.nav } navbar-nav`} 
 		itemScope 
 		itemType="https://schema.org/SiteNavigationElement"
 	>
 		{ mainPages.map( (p, i) => (
 			<li 
 				key={ i } 
-				className={`${ item } nav-item`}
+				className={`${ styles.item } nav-item`}
 				itemProp="name"
 			>
 				<ActiveLink 
@@ -28,7 +24,7 @@ export default function LinksMenu({
 				>
 					<a 
 						title={ p.titleLink }
-						className={ sidebarLink }
+						className={ styles.sidebarLink }
 						itemProp="url"
 					>
 						{ p.nameLink }
