@@ -1,29 +1,27 @@
 import { useState, useEffect } from 'react'
-//import TagManager from 'react-gtm-module'
+import TagManager from 'react-gtm-module'
 //import Script from 'next/script'
 
 import Layout from '@components/layouts/Layouts'
 import ContactsModal from '@components/dumb/modal/ContactsModal'
-import Gtm from '@components/gtm/Gtm'
+//import Gtm from '@components/gtm/Gtm'
 
 import '@styles/app.scss'
 
 import state from 'data/stateJSON.json'
 
-// const tagManagerArgs = {
-// 	gtmId: 'GTM-KHMK3T7'
-// }
-
 function Application({ Component, pageProps }) {
 
-	const [showGtm, setShowGtm] = useState(false);
+	//const [showGtm, setShowGtm] = useState(false);
 
 	useEffect(() => {
 		//Вызываем GTM
-		//TagManager.initialize(tagManagerArgs);
+		setTimeout(() => {
+			TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_ID });
+		  }, 4000);
 
-		const timeOut = setTimeout(() => setShowGtm(true), 2500);
-    	return () => clearTimeout(timeOut);
+		//const timeOut = setTimeout(() => setShowGtm(true), 2500);
+    	//return () => clearTimeout(timeOut);
 	},[])
 
 	//Постоянно смотрим за разрешением 
@@ -71,7 +69,9 @@ function Application({ Component, pageProps }) {
 
 		</Layout>
 
-		{showGtm && <Gtm /> }
+		{
+			//showGtm && <Gtm /> 
+		}
 
 	</>
 	)

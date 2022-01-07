@@ -27,7 +27,7 @@ export default function Layout({
 
 	const [showYandexMap, setShowYandexMap] = useState(false);
 	useEffect(() => {
-		const timeOut = setTimeout(() => setShowYandexMap(true), 2500);
+		const timeOut = setTimeout(() => setShowYandexMap(true), 4000);
     	return () => clearTimeout(timeOut);
 	},[])
 
