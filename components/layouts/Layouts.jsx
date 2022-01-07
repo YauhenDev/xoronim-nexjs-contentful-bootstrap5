@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 //import dynamic from 'next/dynamic'
-import TagManager from 'react-gtm-module'
 
 import Head from 'next/head'
 import NextNprogress from 'nextjs-progressbar'
@@ -26,13 +25,9 @@ export default function Layout({
 
 	const asPath = useRouter()
 
+	// Состояние карты
 	const [showYandexMap, setShowYandexMap] = useState(false);
 	useEffect(() => {
-		//Вызываем GTM
-		setTimeout(() => {
-			TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_ID });
-		}, 2500);
-
 		// Загружаем карту через 4 секунды
 		const timeOut = setTimeout(() => setShowYandexMap(true), 3000);
     	return () => clearTimeout(timeOut);
@@ -92,7 +87,6 @@ export default function Layout({
 		*/ }
 
 		{/* https://question-it.com/questions/2910241/kak-otlozhit-zagruzku-komponenta-karty-s-pomoschju-huka-useeffect-dlja-sajta-react-next-js */}
-		{/* <YandexMap /> */}
 		{showYandexMap && <YandexMap /> }
 
 		<Footer 

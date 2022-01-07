@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react'
-//import TagManager from 'react-gtm-module'
-//import Script from 'next/script'
+import TagManager from 'react-gtm-module'
 
 import Layout from '@components/layouts/Layouts'
 import ContactsModal from '@components/dumb/modal/ContactsModal'
-//import Gtm from '@components/gtm/Gtm'
 
 import '@styles/app.scss'
 
 import state from 'data/stateJSON.json'
+
+const tagManagerArgs = {
+    gtmId: process.env.NEXT_PUBLIC_GTM_ID ,
+    dataLayerName: 'PageDataLayer'
+}
 
 function Application({ Component, pageProps }) {
 
@@ -16,12 +19,9 @@ function Application({ Component, pageProps }) {
 
 	useEffect(() => {
 		//Вызываем GTM
-		// setTimeout(() => {
-		// 	TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_ID });
-		//   }, 4000);
-
-		//const timeOut = setTimeout(() => setShowGtm(true), 2500);
-    	//return () => clearTimeout(timeOut);
+		setTimeout(() => {
+			TagManager.initialize(tagManagerArgs);
+		}, 2500);
 	},[])
 
 	//Постоянно смотрим за разрешением 
@@ -68,10 +68,6 @@ function Application({ Component, pageProps }) {
 			/>
 
 		</Layout>
-
-		{
-			//showGtm && <Gtm /> 
-		}
 
 	</>
 	)
