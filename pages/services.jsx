@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+
 import { Container, Row, Col } from 'react-bootstrap'
 
 import BlockPrice from '@containers/blockPrice/BlockPrice'
@@ -39,8 +42,19 @@ export default function Home({
 	allServices 
 } ) {
 
+	const { asPath } = useRouter()
 	const i = 2
 	const { seoTitle, seoDescription } = state.mainPages[i]
+
+	useEffect(() => {
+		setTimeout(() => {
+			ym(87015504, 'hit', asPath, {
+				title: seoTitle,
+				referer: `${state.mainData.urlSite}${asPath}`
+			});
+		}, 2500);
+	}, []);
+
 
 	return (
 	<>

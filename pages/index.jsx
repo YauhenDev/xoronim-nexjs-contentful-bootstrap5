@@ -1,7 +1,7 @@
 import Head from 'next/head'
+import { useState, useEffect } from 'react'
 
 import IndexHeader from '@containers/indexHeader/IndexHeader'
-
 import BlockPrice from '@containers/blockPrice/BlockPrice'
 import BlockDetails from '@containers/blockDetails/BlockDetails'
 import BlockServices from '@containers/blockServices/BlockServices'
@@ -51,6 +51,15 @@ export default function Home({
 
 	const i = 0
 	const { seoTitle, seoDescription } = state.mainPages[i]
+
+	useEffect(() => {
+		setTimeout(() => {
+			ym(87015504, 'hit', '/', {
+				title: seoTitle,
+				referer: `${state.mainData.urlSite}/`
+			});
+		}, 2500);
+	}, []);
 
 	//debugger;
 	return (

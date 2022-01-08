@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
@@ -65,6 +66,15 @@ export default function RecipeDetails({
 	const { asPath } = useRouter()
 	const { serviceName, slug, description } = services.fields
 
+	useEffect(() => {
+		setTimeout(() => {
+			ym(87015504, 'hit', asPath, {
+				title: serviceName,
+				referer: `${state.mainData.urlSite}${asPath}`
+			});
+		}, 2500);
+	}, []);
+
 	//debugger;
 	return (
 		<>
@@ -83,6 +93,7 @@ export default function RecipeDetails({
 						<h1>{ serviceName }</h1> 
 
 						{ asPath }
+						<br/>
 						{ slug }
 
 						<br />
