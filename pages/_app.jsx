@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Script from 'next/script'
+//import Script from 'next/script'
 import TagManager from 'react-gtm-module'
 
 import Layout from '@components/layouts/Layouts'
@@ -70,24 +70,14 @@ function Application({ Component, pageProps }) {
 
 		</Layout>
 
-		 <Script
-			//strategy="afterInteractive"
+		 {/* <Script
 			strategy="lazyOnload"
 			dangerouslySetInnerHTML={{
 				/*
-				__html: `
-					(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-					j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-					'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-					})(window,document,'script','dataLayer','GTM-KHMK3T7');
-				`, 
-
 				https://vc.ru/dev/158627-uskoryaem-rabotu-sayta-na-etape-razrabotki-i-obgonyaem-konkurentov-v-poiske-chast-2
 				https://osipenkov.ru/yandex-metrika-gtm-tag/
 				https://osipenkov.ru/yandex-metrica-debugger/
-
-				*/
+				* /
 				__html: `
 					(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
 					m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -102,7 +92,7 @@ function Application({ Component, pageProps }) {
 				   });
 				`,
 			}}
-		/>
+		/> */}
 
 	</>
 	)

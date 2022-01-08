@@ -25,6 +25,7 @@ export default function Layout({
 
 	const asPath = useRouter()
 
+
 	// Состояние карты
 	const [showYandexMap, setShowYandexMap] = useState(false);
 	useEffect(() => {
