@@ -1,0 +1,35 @@
+@import "@styles/vars";
+
+$height-index-header: 180px;
+
+.block {
+	background-position: right 70%;
+	background-image: url("/assets/img/index_bg/bg_index_header.jpg");
+	background-image: -webkit-image-set(
+		url("/assets/img/index_bg/bg_index_header.webp") 1x,
+		url("/assets/img/index_bg/bg_index_header.webp") 2x
+	);
+}
+
+.row {
+	height: $height-index-header;
+}
+
+@media (max-width: 991px) {
+	.block {
+		background-position: center 72%;
+	}
+	.row {
+		h1 {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+@media  (max-width: 767px) {
+	.row {
+		h1 {
+			font-size: 1.6rem;
+		}
+	}
+}

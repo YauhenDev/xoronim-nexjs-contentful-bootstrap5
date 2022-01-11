@@ -11,7 +11,7 @@ export default function BlockServicesItem({
 
 	//debugger;
 	return (
-	<Col className={ styles.col }>
+	<Col>
 		<Card 
 			className={`${ styles.card } h-100`}
 		>

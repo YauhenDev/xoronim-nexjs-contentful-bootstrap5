@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-
 import {Container, Row, Col } from 'react-bootstrap'
 
-//import Breadcrumbs from '@components/smart/breadcrum/Breadcrumbs'
+import InnerHeader from '@containers/innerHeader/InnerHeader'
+import Breadcrumbs from '@components/dumb/breadcrum/Breadcrumbs'
 import BlockPrice from '@containers/blockPrice/BlockPrice'
 
 import { createClient } from "contentful"
@@ -63,6 +63,8 @@ export default function RecipeDetails({
 }) {
 
 	const { asPath } = useRouter()
+	const i = 2
+	const { nameLink, pathLink } = state.mainPages[i]
 	const { serviceName, slug, description } = services.fields
 
 	//debugger;
@@ -75,12 +77,21 @@ export default function RecipeDetails({
 				<meta property="og:description"	content={`Заказать услугу "${serviceName}" в Москве. Опытные консультанты раскажут подробности про "${serviceName}"`} />
 			</Head>
 
+			<InnerHeader 
+				h1={ serviceName }
+			/>
+
+			<Breadcrumbs
+				pathLink={ asPath }
+				scndLvl={true}
+				scnNameLink={ nameLink }
+				scnPathLink={ pathLink }
+				nameLink={serviceName}
+			/>
 
 			<Container fluid="xxl">
 				<Row>
 					<Col>
-						
-						<h1>{ serviceName }</h1> 
 
 						{ asPath }
 						<br/>

@@ -1,0 +1,27 @@
+@import "@styles/vars";
+
+.row {
+	padding-top: 1rem;
+	a {
+		color: $main;
+		font-weight: 400;
+	}
+}
+.home {
+	width: 14px;
+	a {
+		top: -1px;
+	}
+	[data-fill="secondary"] {
+		fill: $secondary;
+	}
+}
+.active {
+	a {
+		font-weight: 300;
+		opacity: .8;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

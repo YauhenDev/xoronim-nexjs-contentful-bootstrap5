@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-
 import {Container, Row, Col } from 'react-bootstrap'
 
-//import Breadcrumbs from '@components/smart/breadcrum/Breadcrumbs'
+import InnerHeader from '@containers/innerHeader/InnerHeader'
+import Breadcrumbs from '@components/dumb/breadcrum/Breadcrumbs'
 import BlockPrice from '@containers/blockPrice/BlockPrice'
 
 import { createClient } from "contentful"
@@ -63,7 +63,11 @@ export default function RecipeDetails({
 }) {
 
 	const { asPath } = useRouter()
+	const i = 2
+	const { nameLink, pathLink } = state.mainPages[i]
 	const { heading, price, fullDescription } = priceServices.fields
+
+	
 
 	//debugger;
 	return (
@@ -75,13 +79,22 @@ export default function RecipeDetails({
 				<meta property="og:description"	content={`Честная цена на ${ heading } от ${ price } руб. Узнать подробнее можно  на нашем официальном сайте ритуальной службы XORONIM.moscow`} />
 			</Head>
 
+			<InnerHeader 
+				h1={ heading }
+			/>
+
+			<Breadcrumbs
+				pathLink={ asPath }
+				scndLvl={true}
+				scnNameLink={ nameLink }
+				scnPathLink={ pathLink }
+				nameLink={ heading }
+			/>
 
 			<Container fluid="xxl">
 				<Row>
 					<Col>
 						
-						<h1>{ heading }</h1> 
-
 						{ asPath }
 
 						<br />

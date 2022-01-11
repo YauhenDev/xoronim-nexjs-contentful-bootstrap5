@@ -96,14 +96,50 @@ export default function Footer({
 								<a 
 									title="О Компании"
 								>
-									О Компании
+									О предприятии
+								</a>
+							</Link>
+						</li>
+						<li>
+							<Link
+								href="/"
+							>
+								<a 
+									title="Наши сотрудники"
+								>
+									Наши сотрудники
+								</a>
+							</Link>
+						</li>
+						<li>
+							<Link
+								href="/"
+							>
+								<a 
+									title="Партнеры"
+								>
+									Партнеры
+								</a>
+							</Link>
+						</li>
+						<li>
+							<Link
+								href="/"
+							>
+								<a 
+									title="Список учреждений Москвы"
+								>
+									Список учреждений
 								</a>
 							</Link>
 						</li>
 					</ul>
 				</Col>
 				<Col xl={ 3 }>
-					Круглосуточная горячая линия
+					<h4>
+						Круглосуточная горячая линия
+					</h4>
+					
 					<address>
 						<ul itemScope itemType="http://schema.org/PostalAddress">
 							<li itemProp="telephone" className={ styles.phone }>
@@ -130,7 +166,16 @@ export default function Footer({
 					<small>
 						© 2011 — <span itemProp="copyrightYear">
 							{ thisYear.getFullYear() }
-						</span> ООО "РСС", Все права защищены 
+						</span> Все права защищены.<br /> 
+						Официальный сайт — <Link 
+								href="/"
+							>
+								<a 
+									title="ООО Ритуальная служба сервиса"
+								>
+									ООО "Ритуальная служба сервиса" 
+								</a>
+							</Link>
 					</small>
 				</Col>
 				<Col xs={ 12 } sm={ 6 } className={ styles.licenses }>
