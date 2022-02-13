@@ -91,7 +91,7 @@ export default function Footer({
 					<ul>
 						<li>
 							<Link
-								href="/"
+								href="/ritualnaya-slujba-servisa"
 							>
 								<a 
 									title="О Компании"
@@ -102,7 +102,7 @@ export default function Footer({
 						</li>
 						<li>
 							<Link
-								href="/"
+								href="/ritualnye-agenty"
 							>
 								<a 
 									title="Наши сотрудники"
@@ -113,7 +113,7 @@ export default function Footer({
 						</li>
 						<li>
 							<Link
-								href="/"
+								href="/partners"
 							>
 								<a 
 									title="Партнеры"
@@ -124,7 +124,7 @@ export default function Footer({
 						</li>
 						<li>
 							<Link
-								href="/"
+								href="/spisok-uchrejdeniy-moskvy"
 							>
 								<a 
 									title="Список учреждений Москвы"
