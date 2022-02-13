@@ -7,16 +7,13 @@ import ContactsModal from '@components/dumb/modal/ContactsModal'
 
 import '@styles/app.scss'
 
-import state from 'data/stateJSON.json'
+import { state } from 'data/stateJSON'
 
 const tagManagerArgs = {
     gtmId: process.env.NEXT_PUBLIC_GTM_ID
-    //dataLayerName: 'PageDataLayer'
 }
 
 function Application({ Component, pageProps }) {
-
-	//const [showGtm, setShowGtm] = useState(false);
 
 	useEffect(() => {
 		//Вызываем GTM
@@ -50,6 +47,7 @@ function Application({ Component, pageProps }) {
 	//debugger;
 	return (
 	<>
+
 		<Layout
 			state={ state }
 			widthDevice={ widthDevice }

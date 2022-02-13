@@ -93,12 +93,11 @@ export default function RecipeDetails({
 
 			<Container fluid="xxl">
 				<Row>
-					<Col>
-						
+					<Col className="txt">
+						{/* 
 						{ asPath }
-
-						<br />
-						{ price }
+						{ slug }
+						*/}
 
 						{ 
 							documentToReactComponents( fullDescription )

@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /
+Allow: /
 
 Host: https://xoronim.moscow/
 Sitemap: https://xoronim.moscow/sitemap.xml

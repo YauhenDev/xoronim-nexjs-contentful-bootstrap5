@@ -59,6 +59,11 @@ export default function Breadcrumbs({
 
 			</Col>
 		</Row>
+		<Row>
+			<Col>
+				<hr />
+			</Col>
+		</Row>
 	</Container>
 	)
 }

@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { Container } from 'react-bootstrap'
 
 import InnerHeader from '@containers/innerHeader/InnerHeader'
 import Breadcrumbs from '@components/dumb/breadcrum/Breadcrumbs'
+import Agents from '@containers/agents/Agents'
 import BlockPrice from '@containers/blockPrice/BlockPrice'
-import BlockServicesItems from '@containers/blockServices/BlockServicesItems'
+
 
 import { createClient } from 'contentful'
 export async function getStaticProps( ) {
@@ -15,8 +15,8 @@ export async function getStaticProps( ) {
 		accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 	})
 
-	const services = await client.getEntries({ 
-		content_type: 'services'
+	const ourEmployees = await client.getEntries({ 
+		content_type: 'ourEmployees'
 	})
 
 	//************ USLUGI */
@@ -28,7 +28,7 @@ export async function getStaticProps( ) {
 	return {
 		props: {
 			uslugiPrice: prices.items,		// Цены на услуги
-			allServices: services.items		// Все услуги 
+			allEmployees: ourEmployees.items		// Все услуги 
 		}
 		//revalidate: 10 //Обновлять раз в 10 секунд
 	}
@@ -39,11 +39,11 @@ export default function Home({
 	widthDevice,
 	setmodalShow,
 	uslugiPrice,
-	allServices 
+	allEmployees
 } ) {
 
 	const { asPath } = useRouter()
-	const i = 2
+	const i = 4
 	const { titleLink, seoTitle, seoDescription } = state.mainPages[i]
 
 	//debugger;
@@ -65,11 +65,9 @@ export default function Home({
 			nameLink={ state.mainPages[i].nameLink }
 		/>
 
-		<Container fluid="xxl">
-			<BlockServicesItems 
-				allServices={ allServices }
-			/>
-		</Container>
+		<Agents
+			allEmployees={ allEmployees }
+		/>
 
 		<BlockPrice 
 			header={ state.indexPrice.h2 }
