@@ -10,7 +10,7 @@ export default function Agents({
 
 	//debugger;
 	return (
-	<Container fluid="xxl" className={ styles.wrapper }>
+	<Container as="section" fluid="xxl" className={ styles.wrapper }>
 		<Row>
 			
 		</Row>

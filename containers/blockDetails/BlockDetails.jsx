@@ -13,7 +13,7 @@ export default function BlockDetails({
 
 	//debugger;
 	return (
-	<Container fluid="xxl" className={ styles.wrapper }>
+	<Container as="section" fluid="xxl" className={ styles.wrapper }>
 		<Row>
 			<Col xl={ 12 }>
 

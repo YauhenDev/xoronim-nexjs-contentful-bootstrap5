@@ -2,8 +2,8 @@ export const state = {
 	mainData : {
 		nameSite			: "Ритуальная служба Москвы",
 		urlSite				: "https://xoronim.moscow",
-		nameCompanyFull		: "",
-		nameCompanyShort	: "Городская ритуальной служба",
+		nameCompanyFull		: "ООО «Ритуальная служба сервиса»",
+		nameCompanyShort	: "Городская ритуальная служба",
 		legalAdrCity		: "г. Москва",
 		legalAdrStr			: "ул. Измайловский вал 30 строение 6",
 		legalAdrMetro		: "Метро Семеновская",
@@ -21,35 +21,40 @@ export const state = {
 			titleLink		: "Ритуальная служба в Москве",
 			seoTitle		: "Ритуальная служба в Москве — XORONIM.moscow. Официальный сайт.",
 			seoDescription 	: "Ритуальная служба Москва и Московская область. Ритуальные услуги и организация похорон. Цены на похороны в Москве и ритуальные услуги.",
-			pathLink		: "/"
+			pathLink		: "/",
+			mainPages		: true,
 		},
 		{	id				: 1,
 			nameLink		: "Порядок действий",
 			titleLink		: "Порядок действий",
 			seoTitle		: "seoTitle",
 			seoDescription : "seoDescription",
-			pathLink		: "/procedure"
+			pathLink		: "/procedure",
+			mainPages		: true,
 		},
 		{	id				: 2,
 			nameLink		: "Услуги",
 			titleLink		: "Ритуальные услуги в Москве и Московской области",
 			seoTitle		: "Ритуальные услуги в Москве — XORONIM.moscow",
 			seoDescription : "Доверьте эти заботы нам. Ритуальная служба сервиса предоставляем полный спектр услуг по организации похорон, при этом выполняем работу тактично, оперативно, квалифицированно и не дорого.",
-			pathLink		: "/services"
+			pathLink		: "/services",
+			mainPages		: true,
 		},
 		{	id				: 3,
 			nameLink		: "О предприятии",
 			titleLink		: "Ритуальная служба сервиса",
 			seoTitle		: "Агентство ритуальных услуг в Москве — Ритуальная служба сервиса",
 			seoDescription : "seoDescription",
-			pathLink		: "/ritualnaya-slujba-servisa"
+			pathLink		: "/ritualnaya-slujba-servisa",
+			mainPages		: true,
 		},
 		{	id				: 4,
 			nameLink		: "Наши сотрудники",
 			titleLink		: "Наши сотрудники",
 			seoTitle		: "Агенты — Ритуальной службы сервиса",
 			seoDescription	: "Все наши сотрудники имеют многолетний опыт работы и являются профессионалами. Каждый год проходят курсы повешения квалификации.",
-			pathLink		: "/ritualnye-agenty"
+			pathLink		: "/ritualnye-agenty",
+			mainPages		: true,
 		}
 	],
 	indexHeader: {
@@ -116,5 +121,48 @@ export const state = {
 			{	p	: "В перечень наших услуг включены такие мероприятия, как: доставка тела в морг, предоставление места на кладбище, церемония прощания, поминальный обед и др." },
 			{	p	: "Важно! Остерегайтесь мошенников, которые часто пользуются тяжелой ситуацией, перед выбором центра ритуальных услуг узнайте всю нужную информацию." }
 		]
+	},
+	pagePrice:	[
+		{
+			namePrice		: "Социальные похороны",
+			pathLink		: "/services/prices/socialnye-pokhorony",
+		},
+		{
+			namePrice		: "Стандартные похороны",
+			pathLink		: "/services/prices/standartnye-pokhorony",
+		},
+		{
+			namePrice		: "Премиум похороны",
+			pathLink		: "/services/prices/premium-pokhorony",
+		},
+		{
+			namePrice		: "Элитные похороны",
+			pathLink		: "/services/prices/elitnye-pokhorony",
+		},
+	],
+	pageInfo:	[
+		{
+			namePrice		: "О предприятии",
+			pathLink		: "/ritualnaya-slujba-servisa",
+		},
+		{
+			namePrice		: "Наши сотрудники",
+			pathLink		: "/ritualnye-agenty",
+		},
+		{
+			namePrice		: "Партнеры",
+			pathLink		: "/partners",
+		},
+		{
+			namePrice		: "Список учреждений",
+			pathLink		: "/spisok-uchrejdeniy-moskvy",
+		},
+	],
+	pagePrivacy:	{
+		nameLink		: "Политика в отношении обработки персональных данных",
+		titleLink		: "Ритуальная служба сервиса - Политика в отношении обработки персональных данных",
+		seoTitle		: "Политика в отношении обработки персональных данных ООО Ритуальная служба сервиса",
+		seoDescription 	: "Политика в отношении обработки персональных данных ООО Ритуальная служба сервиса",
+		pathLink		: "/privacy-policy",
 	}
 }

@@ -93,6 +93,9 @@ export default function Layout({
 		<Footer 
 			mainData={ state.mainData }
 			mainPages={ state.mainPages }
+			pagePrice={ state.pagePrice }
+			pageInfo={ state.pageInfo }
+			pagePrivacy={ state.pagePrivacy }
 		/>
 
 	</>

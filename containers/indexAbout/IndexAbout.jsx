@@ -9,7 +9,7 @@ export default function IndexAbout({
 
 	//debugger;
 	return (
-	<Container fluid="xxl" className={ styles.wrapper }>
+	<Container as="section" fluid="xxl" className={ styles.wrapper }>
 		<Row>
 			<Col xl={ 12 }>
 				<h2>

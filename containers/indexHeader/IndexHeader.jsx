@@ -44,7 +44,7 @@ export default function IndexHeader({
 
 	//debugger;
 	return (
-	<Container fluid className="p-0">
+	<Container as="section" fluid className="p-0">
 		<Row className={`g-0 ${ styles.parallax}`}>
 			<Col>
 				{ isMobile ? 

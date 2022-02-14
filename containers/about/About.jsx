@@ -8,7 +8,7 @@ export default function About({
 
 	//debugger;
 	return (
-	<Container fluid="xxl" className={ styles.wrapper }>
+	<Container as="section" fluid="xxl" className={ styles.wrapper }>
 		<Row>
 			
 		</Row>

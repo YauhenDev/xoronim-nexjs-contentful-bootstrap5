@@ -32,7 +32,7 @@ export default function Navbar({
 
 	//debugger;
 	return (
-	<Container fluid 
+	<Container as="nav" fluid 
 		className={`${styles.wrapper}`} 
 		data-menufix={scroll ? "true" : "false"}
 	>

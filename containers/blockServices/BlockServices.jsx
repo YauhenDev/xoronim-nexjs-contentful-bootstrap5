@@ -11,7 +11,7 @@ export default function BlockServices({
 
 	//debugger;
 	return (
-	<Container fluid className={ styles.block }>
+	<Container as="section" fluid className={ styles.block }>
 		<Container fluid="xxl" className={ styles.wrapper }>
 			<Row>
 				<Col xl={ 12 }>

@@ -9,7 +9,7 @@ const LinkLogo = () => {
 			href="/"
 		>
 			<a 
-				title="Ритуальная служба XORONIM.moscow"
+				title="Ритуальная служба Москвы — XORONIM.moscow"
 				className="bs-0 d-block"
 			>
 				<Logo />

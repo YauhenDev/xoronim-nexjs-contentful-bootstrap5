@@ -5,17 +5,21 @@ import LinkLogo from '@components/ui/logo/LinkLogo'
 import Phone from '@components/dumb/phone/Phone'
 
 import styles from './Footer.module.scss'
+import { main } from '@popperjs/core'
 
 const thisYear = new Date();
 
 export default function Footer({ 
 	mainData,
-	mainPages
+	mainPages,
+	pagePrice,
+	pageInfo,
+	pagePrivacy,
 }) {
 
 	//debugger; 
 	return (
-	<Container fluid className={ styles.block }>
+	<Container as="footer" fluid className={ styles.block }>
 		<Container 
 			fluid="xxl" 
 			className={ styles.wrapper }
@@ -34,105 +38,43 @@ export default function Footer({
 
 				</Col>
 				<Col xl={ 3 }>
-						<h4>
-							Похоронные услуги
-						</h4>
-						<ul>
-							<li>
+					<h4>
+						Похоронные услуги
+					</h4>
+					<ul>
+						{ pagePrice.map( (p, i) => (
+							<li key={ i }>
 								<Link
-									href="/services/prices/socialnye-pokhorony"
+									href={ p.pathLink }
 								>
 									<a 
-										title="Социальные похороны"
+										title={ p.namePrice }
 									>
-										Социальные похороны
+										{ p.namePrice }
 									</a>
 								</Link>
 							</li>
-							<li>
-								<Link
-									href="/services/prices/standartnye-pokhorony"
-								>
-									<a 
-										title="Стандартные похороны"
-									>
-										Стандартные похороны
-									</a>
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/services/prices/premium-pokhorony"
-								>
-									<a 
-										title="Премиум похороны"
-									>
-										Премиум похороны
-									</a>
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/services/prices/elitnye-pokhorony"
-								>
-									<a 
-										title="Элитные похороны"
-									>
-										Элитные похороны
-									</a>
-								</Link>
-							</li>
-						</ul>
+						))}
+					</ul>
 				</Col>
 				<Col xl={ 3 }>
 					<h4>
 						Информация
 					</h4>
 					<ul>
-						<li>
-							<Link
-								href="/ritualnaya-slujba-servisa"
-							>
-								<a 
-									title="О Компании"
+						{ pageInfo.map( (p, i) => (
+							<li key={ i }>
+								<Link
+									href={ p.pathLink }
 								>
-									О предприятии
-								</a>
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/ritualnye-agenty"
-							>
-								<a 
-									title="Наши сотрудники"
-								>
-									Наши сотрудники
-								</a>
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/partners"
-							>
-								<a 
-									title="Партнеры"
-								>
-									Партнеры
-								</a>
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/spisok-uchrejdeniy-moskvy"
-							>
-								<a 
-									title="Список учреждений Москвы"
-								>
-									Список учреждений
-								</a>
-							</Link>
-						</li>
+									<a 
+										title={ p.namePrice }
+									>
+										{ p.namePrice }
+									</a>
+								</Link>
+							</li>
+						))}
 					</ul>
 				</Col>
 				<Col xl={ 3 }>
@@ -168,12 +110,12 @@ export default function Footer({
 							{ thisYear.getFullYear() }
 						</span> Все права защищены.<br /> 
 						Официальный сайт — <Link 
-								href="/"
+								href={ mainPages[3].pathLink }
 							>
 								<a 
-									title="ООО Ритуальная служба сервиса"
+									title={ mainData.nameCompanyFull }
 								>
-									ООО "Ритуальная служба сервиса" 
+									{ mainData.nameCompanyFull }
 								</a>
 							</Link>
 					</small>
@@ -181,12 +123,12 @@ export default function Footer({
 				<Col xs={ 12 } sm={ 6 } className={ styles.licenses }>
 					<small>
 						<Link 
-							href="/"
+							href={ pagePrivacy.pathLink }
 						>
 							<a 
-								title="Политика в отношении обработки персональных данных"
+								title={ pagePrivacy.titleLink }
 							>
-								Политика в отношении обработки персональных данных
+								{ pagePrivacy.nameLink }
 							</a>
 						</Link>
 					</small>

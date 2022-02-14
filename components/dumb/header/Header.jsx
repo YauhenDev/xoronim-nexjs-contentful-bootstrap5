@@ -1,4 +1,4 @@
-import {Container, Col, Button } from 'react-bootstrap'
+import {Container, Row, Col, Button } from 'react-bootstrap'
 
 import LinkLogo from '@components/ui/logo/LinkLogo'
 import PhoneSVG from '@components/ui/ico/PhoneSVG'
@@ -13,10 +13,8 @@ export default function Header({
 
 	//debugger;
 	return (
-	<Container fluid="xxl" className={ styles.wrapper }>
-		<header 
-			className="row" 
-		>
+	<Container as="header" fluid="xxl" className={ styles.wrapper }>
+		<Row>
 			<Col lg={ 2 } xl={ 2 } className={`d-none d-lg-block ${ styles.logo }`}>
 
 				<LinkLogo />
@@ -56,7 +54,7 @@ export default function Header({
 				/>
 
 			</Col>
-		</header>
+		</Row>
 	</Container>
 	)
 }

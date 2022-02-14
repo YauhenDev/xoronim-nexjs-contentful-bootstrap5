@@ -8,7 +8,7 @@ export default function InnerHeader({
 
 	//debugger;
 	return (
-	<Container fluid className={ styles.block }>
+	<Container as="section" fluid className={ styles.block }>
 		<Container fluid="xxl">
 			<Row className={`align-items-center ${ styles.row }`}>
 				<Col>

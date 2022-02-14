@@ -11,7 +11,7 @@ export default function BlockQuestions({
 
 	//debugger;
 	return (
-	<Container fluid="xxl" className={ styles.wrapper }>
+	<Container as="section" fluid="xxl" className={ styles.wrapper }>
 		<Row className={ styles.row }>
 			<Col 
 				xs={{span: 12, order: 3}} 

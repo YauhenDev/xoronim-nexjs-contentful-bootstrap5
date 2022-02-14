@@ -28,7 +28,7 @@ export default function BlockPrice({
 
 	//debugger;
 	return (
-	<Container fluid className={ styles.block }>
+	<Container as="section" fluid className={ styles.block }>
 		<Container fluid className={`${ styles.cloud } p-0 `}>
 			<Container fluid className={`${ styles.angel } p-0`}>
 				<Image 
