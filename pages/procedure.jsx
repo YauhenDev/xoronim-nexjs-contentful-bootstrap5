@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 import InnerHeader from '@containers/innerHeader/InnerHeader'
 import Breadcrumbs from '@components/dumb/breadcrum/Breadcrumbs'
-import About from '@containers/about/About'
+import BlockDetails from '@containers/blockDetails/BlockDetails'
 import BlockPrice from '@containers/blockPrice/BlockPrice'
 
 
@@ -15,7 +15,7 @@ export async function getStaticProps( ) {
 		accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 	})
 
-	const umerchelovekchtodelat = await client.getEntries({ 
+	const details = await client.getEntries({ 
 		content_type: 'umer-chelovek-chto-delat'
 	})
 
@@ -28,9 +28,8 @@ export async function getStaticProps( ) {
 	return {
 		props: {
 			uslugiPrice: prices.items,		// Цены на услуги
-			procedure: umerchelovekchtodelat.items		// Все услуги 
+			chtoDelat: details.items		// Все услуги 
 		}
-		//revalidate: 10 //Обновлять раз в 10 секунд
 	}
 }
 
@@ -39,7 +38,7 @@ export default function Home({
 	widthDevice,
 	setmodalShow,
 	uslugiPrice,
-	procedure
+	chtoDelat
 } ) {
 
 	const { asPath } = useRouter()
@@ -65,7 +64,13 @@ export default function Home({
 			nameLink={ state.mainPages[i].nameLink }
 		/>
 
-		test
+		<BlockDetails 
+			phone={ state.mainData.phoneNumber_1 }
+			header={ state.indexDetails.h2 }
+			txt={ state.indexDetails.p }
+			txt2={ state.indexDetails.p2 }
+			chtoDelat={ chtoDelat }
+		/>
 
 		<BlockPrice 
 			header={ state.indexPrice.h2 }

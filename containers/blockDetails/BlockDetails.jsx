@@ -8,6 +8,7 @@ export default function BlockDetails({
 	phone,
 	header,
 	txt,
+	txt2,
 	chtoDelat
 }) {
 
@@ -19,7 +20,12 @@ export default function BlockDetails({
 
 				<h2>{ header }</h2>
 
-				<p className="pb-4">{ txt }</p>
+				<p className="pb-2">
+					{ txt }
+				</p>
+				<p className="pb-2">
+					{ txt2 }
+				</p>
 
 				<BlockDetailsItems
 					phone={ phone }

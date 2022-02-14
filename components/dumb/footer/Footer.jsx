@@ -27,7 +27,12 @@ export default function Footer({
 			itemType="https://schema.org/WPFooter"
 		>
 			<Row>
-				<Col xl={ 3 }>
+				<Col 
+					xs={ 12 }
+					lg={{ span: 6, order: 1 }}
+					xl={{ span: 3, order: 1 }}
+					className={ styles.col }
+				>
 
 					<LinkLogo />
 
@@ -37,7 +42,13 @@ export default function Footer({
 					</p>
 
 				</Col>
-				<Col xl={ 3 }>
+				<Col 
+					xs={ 12 }
+					sm={ 6 }
+					lg={{ span: 6, order: 3 }}
+					xl={{ span: 3, order: 2 }}
+					className={ styles.col }
+				>
 					<h4>
 						Похоронные услуги
 					</h4>
@@ -57,7 +68,13 @@ export default function Footer({
 						))}
 					</ul>
 				</Col>
-				<Col xl={ 3 }>
+				<Col 
+					xs={ 12 }
+					sm={ 6 }
+					lg={{ span: 6, order: 4 }}
+					xl={{ span: 3, order: 3 }}
+					className={ styles.col }
+				>
 					<h4>
 						Информация
 					</h4>
@@ -77,7 +94,12 @@ export default function Footer({
 						))}
 					</ul>
 				</Col>
-				<Col xl={ 3 }>
+				<Col 
+					xs={ 12 }
+					lg={{ span: 6, order: 2 }}
+					xl={{ span: 3, order: 4 }}
+					className={ styles.col }
+				>
 					<h4>
 						Круглосуточная горячая линия
 					</h4>
@@ -102,8 +124,10 @@ export default function Footer({
 					</address>
 				</Col>
 			</Row>
-			<hr />
 			<Row>
+				<Col xs= {12}>
+				<hr />
+				</Col>
 				<Col xs={ 12 } sm={ 6 } className={ styles.copyright }>
 					<small>
 						© 2011 — <span itemProp="copyrightYear">

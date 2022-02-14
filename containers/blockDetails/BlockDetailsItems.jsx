@@ -48,7 +48,7 @@ export default function BlockDetailsItems({
 				</Accordion.Header>
 				<Accordion.Body>
 
-					<p>
+					<p className="pb-2">
 						Вызовите официального представителя по  
 						телефону <Phone 
 							phone={ phone }

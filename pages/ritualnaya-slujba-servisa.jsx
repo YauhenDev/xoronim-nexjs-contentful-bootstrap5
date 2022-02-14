@@ -28,7 +28,7 @@ export async function getStaticProps( ) {
 	return {
 		props: {
 			uslugiPrice: prices.items,		// Цены на услуги
-			aboutCompany: about.items		// Все услуги 
+			aboutPage: about.items		// Все услуги 
 		}
 		//revalidate: 10 //Обновлять раз в 10 секунд
 	}
@@ -39,8 +39,11 @@ export default function Home({
 	widthDevice,
 	setmodalShow,
 	uslugiPrice,
-	aboutCompany
+	aboutPage
 } ) {
+
+	const aboutCompany = aboutPage.filter(p => !p.fields.privacy)
+	const { description } = aboutCompany[0].fields
 
 	const { asPath } = useRouter()
 	const i = 3
@@ -66,7 +69,7 @@ export default function Home({
 		/>
 
 		<About
-			aboutCompany={aboutCompany}
+			description={ description }
 		/>
 
 		<BlockPrice 
