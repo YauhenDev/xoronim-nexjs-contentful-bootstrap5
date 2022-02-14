@@ -35,7 +35,9 @@ export default function MobileMenu({
 				<LinkLogo />
 			</Col>
 			<Col xs={ 5 } sm={ 6 } md={ 6 }  className="text-end">
-				<PhoneBtn mainData={ styles.mainData } />
+				<PhoneBtn 
+					phone={ mainData.phoneNumber_1 } 
+				/>
 			</Col>
 			<Col xs={ 3 } sm={ 2 } md={ 2 } className="text-end">
 				<Button 

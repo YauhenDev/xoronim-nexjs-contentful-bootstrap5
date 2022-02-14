@@ -61,12 +61,13 @@ function Application({ Component, pageProps }) {
 				setmodalShow={ setmodalShow}
 			/>
 
-			<ContactsModal	
-				modalShow={ modalShow }
-				setmodalShow={ setmodalShow }
-			/>
-
 		</Layout>
+
+		<ContactsModal	
+			modalShow={ modalShow }
+			setmodalShow={ setmodalShow }
+			mainData={ state.mainData }
+		/>
 
 		 {/* <Script
 			strategy="lazyOnload"
