@@ -42,7 +42,7 @@ export default function Layout({
 		<Head>
 			<meta name="theme-color" content="#D7DAE5" />
 			<link rel="shortcut icon" href="https://xoronim.moscow/assets/favicon/favicon.png" type="image/png" />
-			<link rel="icon" href="https://xoronim.moscow/assets/favicon/favicon.svg" sizes="any" />
+			<link rel="icon" href="https://xoronim.moscow/assets/favicon/favicon.svg" sizes="any" type="image/svg+xml" />
 
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content="https://xoronim.moscow/" />
