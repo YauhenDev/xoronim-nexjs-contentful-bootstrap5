@@ -7,7 +7,8 @@ import styles from './Agents.module.scss'
 export default function Agent({ 
 	name,
 	img,
-	description
+	description,
+	work
 }) {
 
 	//debugger;
@@ -23,9 +24,9 @@ export default function Agent({
 			className="card-img-top"
 		/>
 
-		<Card.Body>
+		<Card.Body className={ styles.body }>
 			<Card.Text 
-				className={ styles.text } 
+				className={`${ styles.text } ${work ? '' : `${ styles.dontWork }`}`}
 				as="div"
 			>
 				<h3>
@@ -33,6 +34,14 @@ export default function Agent({
 				</h3>
 				{ 
 					documentToReactComponents( description )
+				}
+
+				{work ? 
+					''  
+				: 
+					<span className={ styles.label }>
+						не работает
+					</span>
 				}
 				
 			</Card.Text>

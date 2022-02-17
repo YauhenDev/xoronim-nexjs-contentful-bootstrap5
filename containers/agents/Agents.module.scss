@@ -8,7 +8,6 @@
 .cardPerson {
 	border: none;
 	font-size: 1.2rem;
-	
 }
 
 .text {
@@ -20,6 +19,32 @@
 	}
 }
 
-@media (max-width: 991px) {
+.dontWork { 
+	h3 {
+		margin-top: 2rem;
+	}
+}
 
+.label {
+	display: block;
+	color: $danger;
+	border: 1px solid $danger;
+	background-color: rgba($color: $danger, $alpha: 0.25);
+	text-align: center;
+	font-weight: 600;
+	padding: .5rem;
+	transform: rotate(-3deg);
+	top: -125px;
+	position: relative;
+
+}
+
+@media (max-width: 991px) {
+	.body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.cardPerson {
+		font-size: 1rem;
+	}
 }

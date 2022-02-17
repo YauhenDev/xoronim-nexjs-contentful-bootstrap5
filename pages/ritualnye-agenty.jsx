@@ -6,7 +6,6 @@ import Breadcrumbs from '@components/dumb/breadcrum/Breadcrumbs'
 import Agents from '@containers/agents/Agents'
 import BlockPrice from '@containers/blockPrice/BlockPrice'
 
-
 import { createClient } from 'contentful'
 export async function getStaticProps( ) {
 
