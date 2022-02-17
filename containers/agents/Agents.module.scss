@@ -10,6 +10,12 @@
 	font-size: 1.2rem;
 }
 
+.whiteblack {
+	-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+	opacity: .8;
+}
+
 .text {
 	padding-top: .5rem;
 	padding-bottom: .5rem;

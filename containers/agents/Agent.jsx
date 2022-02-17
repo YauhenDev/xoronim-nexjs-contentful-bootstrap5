@@ -21,7 +21,7 @@ export default function Agent({
 			alt={ name }
 			width={500}
 			height={500}
-			className="card-img-top"
+			className={`card-img-top ${work ? '' : `${ styles.whiteblack }`} `}
 		/>
 
 		<Card.Body className={ styles.body }>
