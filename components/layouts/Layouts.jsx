@@ -41,8 +41,9 @@ export default function Layout({
 	
 		<Head>
 			<meta name="theme-color" content="#D7DAE5" />
-			<link rel="shortcut icon" href="https://xoronim.moscow/assets/favicon/favicon.png" type="image/png" />
-			<link rel="icon" href="https://xoronim.moscow/assets/favicon/favicon.svg" sizes="120x120" type="image/svg+xml" />
+			<link rel="shortcut icon" href="/assets/favicon/favicon.png" sizes="32x32" type="image/png" />
+			<link rel="icon" href="/assets/favicon/favicon120x120.png" sizes="120x120" type="image/png" />
+			<link rel="icon" href="/assets/favicon/favicon.svg" sizes="120x120" type="image/svg+xml" />
 
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content="https://xoronim.moscow/" />
