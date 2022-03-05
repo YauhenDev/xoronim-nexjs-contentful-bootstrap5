@@ -2,6 +2,8 @@ import Image from 'next/image'
 import { Card } from 'react-bootstrap'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
+//import ReadMore from '@components/dumb/readMore/ReadMore'
+
 import styles from './Agents.module.scss'
 
 export default function Agent({ 
@@ -32,6 +34,11 @@ export default function Agent({
 				<h3>
 					{ name }
 				</h3>
+
+				{/* <ReadMore
+					text="text test text test text test text test text test text test text test text test "
+				/> */}
+
 				{ 
 					documentToReactComponents( description )
 				}
