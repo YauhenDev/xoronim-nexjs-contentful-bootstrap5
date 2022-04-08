@@ -8,18 +8,11 @@ export default function Agents({
 	allEmployees
 }) {
 
+
 	allEmployees.sort((a, b) => a.fields.sort - b.fields.sort)
 	
 	const workEmployees = allEmployees.filter(p => !p.fields.DoesNotWork)
 	const dontWorkEmployees = allEmployees.filter(p => p.fields.DoesNotWork)
-
-	// function dontWork() {
-	// 	return (
-	// 	<>
-	// 		11111111
-	// 	</>
-	// )}
-
 
 	//debugger;
 	return (
