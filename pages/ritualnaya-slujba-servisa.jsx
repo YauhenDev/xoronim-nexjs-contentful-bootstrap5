@@ -46,7 +46,7 @@ export default function Home({
 	const { description } = aboutCompany[0].fields
 
 	const { asPath } = useRouter()
-	const i = 3
+	const i = 4
 	const { titleLink, seoTitle, seoDescription } = state.mainPages[i]
 
 	//debugger;

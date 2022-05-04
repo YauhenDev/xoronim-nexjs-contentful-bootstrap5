@@ -3,8 +3,8 @@ import { useRouter } from 'next/router'
 
 import InnerHeader from '@containers/innerHeader/InnerHeader'
 import Breadcrumbs from '@components/dumb/breadcrum/Breadcrumbs'
-import Agents from '@containers/agents/Agents'
 import BlockPrice from '@containers/blockPrice/BlockPrice'
+
 
 import { createClient } from 'contentful'
 export async function getStaticProps( ) {
@@ -12,10 +12,6 @@ export async function getStaticProps( ) {
 	const client = createClient({
 		space: process.env.CONTENTFUL_SPACE_ID,
 		accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-	})
-
-	const ourEmployees = await client.getEntries({ 
-		content_type: 'ourEmployees'
 	})
 
 	//************ USLUGI */
@@ -27,7 +23,6 @@ export async function getStaticProps( ) {
 	return {
 		props: {
 			uslugiPrice: prices.items,		// Цены на услуги
-			allEmployees: ourEmployees.items		// Все услуги 
 		}
 		//revalidate: 10 //Обновлять раз в 10 секунд
 	}
@@ -37,12 +32,11 @@ export default function Home({
 	state,
 	widthDevice,
 	setmodalShow,
-	uslugiPrice,
-	allEmployees
+	uslugiPrice
 } ) {
 
 	const { asPath } = useRouter()
-	const i = 5
+	const i = 3
 	const { titleLink, seoTitle, seoDescription } = state.mainPages[i]
 
 	//debugger;
@@ -64,9 +58,7 @@ export default function Home({
 			nameLink={ state.mainPages[i].nameLink }
 		/>
 
-		<Agents
-			allEmployees={ allEmployees }
-		/>
+		
 
 		<BlockPrice 
 			header={ state.indexPrice.h2 }
