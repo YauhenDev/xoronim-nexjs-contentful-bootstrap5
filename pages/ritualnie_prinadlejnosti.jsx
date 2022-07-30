@@ -43,7 +43,14 @@ export default function Home({
 	const { asPath } = useRouter()
 	const i = 3
 	const { titleLink, seoTitle, seoDescription } = state.mainPages[i]
+
+
 	const imgNumber = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+	
+	// for (let numberImg = 0; numberImg < 29; numberImg++) {
+	// 	return numberImg
+	// }
+	// const imgNumber2 = [numberImg]
 
 	//debugger;
 	return (
@@ -73,6 +80,7 @@ export default function Home({
 				</Col>
 			</Row>
 			<Row>
+	
 				{ imgNumber.map( (p, i) => (
 					<Col 
 						key={ i }

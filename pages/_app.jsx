@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+
 //import Script from 'next/script'
-import TagManager from 'react-gtm-module'
+//import TagManager from 'react-gtm-module'
+import { sendMetrik } from '@lib/metriks'
 
 import Layout from '@components/layouts/Layouts'
 import ContactsModal from '@components/dumb/modal/ContactsModal'
@@ -9,18 +12,20 @@ import '@styles/app.scss'
 
 import { state } from 'data/stateJSON'
 
-const tagManagerArgs = {
-    gtmId: process.env.NEXT_PUBLIC_GTM_ID
-}
+// const tagManagerArgs = {
+//     gtmId: process.env.NEXT_PUBLIC_GTM_ID
+// }
 
 function Application({ Component, pageProps }) {
 
-	useEffect(() => {
-		//Вызываем GTM
-		setTimeout(() => {
-			TagManager.initialize(tagManagerArgs);
-		}, 3200);
-	},[])
+	const router = useRouter()
+
+	// useEffect(() => {
+	// 	//Вызываем GTM
+	// 	setTimeout(() => {
+	// 		TagManager.initialize(tagManagerArgs);
+	// 	}, 3200);
+	// },[])
 
 	//Постоянно смотрим за разрешением 
 	const useDeviceSize = () => {
@@ -43,6 +48,38 @@ function Application({ Component, pageProps }) {
 
 	//Состояние модального окна
 	const [modalShow, setmodalShow] = useState(false);
+
+	// Установка Yandex.Metrika + GTM
+	useEffect(() => {
+
+		// Иницилизация Y.M.
+		//console.log(`Иницилизация Y.M на url ${ asPath }`)
+		sendMetrik('init', {
+			defer: true, //отключить автоматическую отправку данных о просмотрах https://yandex.ru/support/metrica/code/counter-spa-setup.html?lang=ru
+			triggerEvent: true,	// Проверка инициализации счетчика https://yandex.ru/support/metrica/code/counter-initialize.html
+			clickmap:true,
+			trackLinks:true,
+			accurateTrackBounce:true,
+			webvisor:true,
+			trackHash:true
+	   });
+
+	   // Если URL меняется
+		const handleRouteChange = (url) => {
+			//console.log(`URL изменен на ${url}`)
+			//Отправляем событие HIT в Y.М
+			sendMetrik('hit', url);
+			//Отправляем событие pageview в GTM
+			window.dataLayer.push({
+				event: 'pageview',
+				page: url,
+			});
+		}
+		router.events.on('routeChangeStart', handleRouteChange)
+		return () => {
+		  router.events.off('routeChangeStart', handleRouteChange)
+		}
+	  }, [])
 
 	//debugger;
 	return (
